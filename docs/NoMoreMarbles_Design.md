@@ -10,39 +10,36 @@ It is intended to be **modular**, **scalable**, and **developer-friendly**
 <summary>SECTION 1: TOWERS</summary>
 
 ### Tower Template
-Tower: [Name]
-Type: [Damage / Slow / Hybrid / Utility]
-Cost: [Base Cost]
 
-Base Stats:
+### Tower: [Name]  
+- **Type:** [Damage / Slow / Hybrid / Utility]  
+- **Cost:** [Base Cost]  
 
-Damage: [value per shot]
+**Base Stats:**  
+- **Damage:** [value per shot]  
+- **Range:** [short / medium / long]  
+- **Fire Rate:** [shots per second]  
+- **Effect:** [Describe base effect or impact on marbles]  
 
-Range: [short / medium / long]
+**Upgrade Branches:**  
 
-Fire Rate: [shots per second]
+**Branch A — [Theme/Function, e.g., “Precision”]:**  
+| Tier | Upgrade Name | Cost | Effect / Description |  
+|------|---------------|------|----------------------|  
+| 1 | [Upgrade 1] | [Cost] | [Effect] |  
+| 2 | [Upgrade 2] | [Cost] | [Effect] |  
+| 3 | [Upgrade 3] | [Cost] | [Effect] |  
 
-Effect: [Describe base effect or impact on marbles]
+**Branch B — [Theme/Function, e.g., “Support”]:**  
+| Tier | Upgrade Name | Cost | Effect / Description |  
+|------|---------------|------|----------------------|  
+| 1 | [Upgrade 1] | [Cost] | [Effect] |  
+| 2 | [Upgrade 2] | [Cost] | [Effect] |  
+| 3 | [Upgrade 3] | [Cost] | [Effect] |  
 
-Upgrade Branches:
-
-Branch A — [Theme/Function, e.g., “Precision”]:
-
-Tier	Upgrade Name	Cost	Effect / Description
-1	[Upgrade 1]	[Cost]	[Effect]
-2	[Upgrade 2]	[Cost]	[Effect]
-3	[Upgrade 3]	[Cost]	[Effect]
-
-Branch B — [Theme/Function, e.g., “Support”]:
-
-Tier	Upgrade Name	Cost	Effect / Description
-1	[Upgrade 1]	[Cost]	[Effect]
-2	[Upgrade 2]	[Cost]	[Effect]
-3	[Upgrade 3]	[Cost]	[Effect]
-
-Visual Notes: [Shape, color, projectile type, animation cues]
-Sound Notes: [Firing, impact, upgrade sounds]
-Implementation Notes: [Script references, prefab names, variables]
+- **Visual Notes:** [Shape, color, projectile type, animation cues]  
+- **Sound Notes:** [Firing, impact, upgrade sounds]  
+- **Implementation Notes:** [Script references, prefab names, variables]
 
 
 ### Tower Entries
