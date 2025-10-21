@@ -14,3 +14,14 @@ config/name="NoMoreMarbles"
 run/main_scene="uid://devgswfjqsjj8"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3584
+window/size/viewport_height=2048
+window/size/window_width_override=1194
+window/size/window_height_override=682
+
+[dotnet]
+
+project/assembly_name="NoMoreMarbles"
