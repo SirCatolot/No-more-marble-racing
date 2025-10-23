@@ -25,3 +25,4 @@ text = "Play
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+text = "Quit"

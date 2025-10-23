@@ -8,3 +8,5 @@ script = ExtResource("1_6j52s")
 [node name="BackButton" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
+text = "Back
+"
