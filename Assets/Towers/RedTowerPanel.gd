@@ -3,6 +3,7 @@ extends Panel
 
 @onready var tower = preload("res://Assets/Towers/RedBulletTower.tscn")
 var currTile
+const TOWER_COST := 25
 
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
@@ -29,10 +30,10 @@ func _on_gui_input(event):
 			if get_child_count() > 1:
 				get_child(1).queue_free()
 			var path = get_tree().get_root().get_node("Main/Towers")
-			
-			path.add_child(tempTower)
-			tempTower.global_position = event.global_position
-			tempTower.get_node("Area").hide()
+			if GameState.try_spend(TOWER_COST):
+				path.add_child(tempTower)
+				tempTower.global_position = event.global_position
+				tempTower.get_node("Area").hide()
 		
 	else:
 		if get_child_count() > 1:
