@@ -1,28 +1,280 @@
-[gd_scene load_steps=2 format=3 uid="uid://devgswfjqsjj8"]
+[gd_scene load_steps=20 format=3 uid="uid://devgswfjqsjj8"]
 
 [ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
+[ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://Assets/UI/pngs/TitleScreenBackground.png" id="2_iwbf0"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Fonts/Super Trend.ttf" id="3_2ysvc"]
+[ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://Fonts/Playfull Rocket.ttf" id="4_2ysvc"]
+[ext_resource type="AudioStream" uid="uid://dcrcipxb02y82" path="res://Audio/ball-in-hole-99750.mp3" id="5_bhu4a"]
+[ext_resource type="AudioStream" uid="uid://wubljofrr5vr" path="res://Audio/marble-83124.mp3" id="6_e2per"]
+[ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://Audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_e2per"]
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpiny"]
+texture = ExtResource("2_iwbf0")
+modulate_color = Color(0.50140655, 0.5014065, 0.5014065, 1)
+
+[sub_resource type="Animation" id="Animation_xpiny"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(753, 445)]
+}
+
+[sub_resource type="Animation" id="Animation_2ysvc"]
+resource_name = "bob"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(753, 445), Vector2(753, 435), Vector2(753, 445)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhu4a"]
+_data = {
+&"RESET": SubResource("Animation_xpiny"),
+&"bob": SubResource("Animation_2ysvc")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jbdy"]
+bg_color = Color(0, 0.50151926, 0.6698111, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mi0g"]
+bg_color = Color(2.0214916e-06, 0.4180806, 0.56295544, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ysvc"]
+bg_color = Color(0.42735183, 0.81547886, 0.9999998, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqjyj"]
+bg_color = Color(2.0214916e-06, 0.4180806, 0.56295544, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpiny"]
+bg_color = Color(0.8352941, 0.30980393, 0.02745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhu4a"]
+bg_color = Color(0.6297528, 0.22407246, 0.0102072805, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2per"]
+bg_color = Color(0.9947317, 0.5019365, 0.3076295, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vr37"]
+bg_color = Color(0.6297528, 0.22407246, 0.0102072805, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 8
+
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjtqc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 3586.0
-offset_bottom = 1056.0
+[node name="MenuBackgroundPicture" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xpiny")
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="GameTitleShadow" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1053.0
+offset_top = 446.0
+offset_right = 1093.0
+offset_bottom = 713.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/normal_font = ExtResource("3_2ysvc")
+theme_override_font_sizes/normal_font_size = 211
+bbcode_enabled = true
+text = "[color=black]No  More  Marbles"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameTitle" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1039.0
+offset_top = 445.0
+offset_right = 1107.0
+offset_bottom = 709.0241
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/shadow_offset_x = 11
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/normal_font = ExtResource("3_2ysvc")
+theme_override_font_sizes/normal_font_size = 211
+bbcode_enabled = true
+text = "[color=red]No [color=green] More [color=yellow] Marbles"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimTitle" type="AnimationPlayer" parent="GameTitle"]
+libraries = {
+&"": SubResource("AnimationLibrary_bhu4a")
+}
+autoplay = "bob"
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.625
+offset_top = -164.0
+offset_right = 357.625
+offset_bottom = 238.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 39
+
+[node name="StartButton" type="Button" parent="MenuButtons"]
 layout_mode = 2
-text = "Play
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_6jbdy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7mi0g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ysvc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nqjyj")
+text = "Start Game "
+
+[node name="QuitButton" type="Button" parent="MenuButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_xpiny")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bhu4a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2per")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7vr37")
+text = "Quit
 "
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Quit"
+[node name="ClickSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_e2per")
+
+[node name="HoverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bhu4a")
+volume_db = 8.0
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_e2per")
+volume_db = -12.0
+autoplay = true
+parameters/looping = true

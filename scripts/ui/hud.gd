@@ -19,5 +19,3 @@ func _on_lives_changed(l: int) -> void:
 
 func _on_game_over() -> void:
 	game_over_layer.visible = true
-
-
