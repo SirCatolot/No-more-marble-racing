@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://mmeosbj0gl42"]
 
-[ext_resource type="Script" uid="uid://gt0i3voo2tuh" path="res://Assets/Towers/RedTowerPanel.gd" id="1_buc56"]
-[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://tower-defense-top-down/PNG/RedBlockTower.png" id="2_buc56"]
+[ext_resource type="Script" uid="uid://gt0i3voo2tuh" path="res://scripts/ui/RedTowerPanel.gd" id="1_buc56"]
+[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://Assets/PNGs/RedBlockTower.png" id="2_buc56"]
 
 [node name="RedTowerPanel" type="Panel"]
 custom_minimum_size = Vector2(80, 80)

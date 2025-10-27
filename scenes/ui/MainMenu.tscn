@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
 [ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://Assets/UI/pngs/TitleScreenBackground.png" id="2_iwbf0"]
-[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Fonts/Super Trend.ttf" id="3_2ysvc"]
-[ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://Fonts/Playfull Rocket.ttf" id="4_2ysvc"]
-[ext_resource type="AudioStream" uid="uid://dcrcipxb02y82" path="res://Audio/ball-in-hole-99750.mp3" id="5_bhu4a"]
-[ext_resource type="AudioStream" uid="uid://wubljofrr5vr" path="res://Audio/marble-83124.mp3" id="6_e2per"]
-[ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://Audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_e2per"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Assets/Fonts/Super Trend.ttf" id="3_2ysvc"]
+[ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://Assets/Fonts/Playfull Rocket.ttf" id="4_2ysvc"]
+[ext_resource type="AudioStream" uid="uid://dcrcipxb02y82" path="res://Assets/Audio/ball-in-hole-99750.mp3" id="5_bhu4a"]
+[ext_resource type="AudioStream" uid="uid://wubljofrr5vr" path="res://Assets/Audio/marble-83124.mp3" id="6_e2per"]
+[ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://Assets/Audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_e2per"]
 [ext_resource type="Script" uid="uid://cptrjck1m7d1v" path="res://scenes/ui/audio_control.gd" id="8_7mi0g"]
 [ext_resource type="Script" uid="uid://bg3r6n305o3n5" path="res://scenes/ui/full_screen_control.gd" id="9_nqjyj"]
 

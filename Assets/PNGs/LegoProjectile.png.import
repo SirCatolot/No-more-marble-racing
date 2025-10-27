@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnx7nh6y6af30"
-path="res://.godot/imported/Marble A.png-256de8df3fa33128c692f414aa960a1f.ctex"
+uid="uid://c2uymshnim43a"
+path="res://.godot/imported/LegoProjectile.png-1faa08e9a4f232b8d2fee88ae23372e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PNGs/Marble A.png"
-dest_files=["res://.godot/imported/Marble A.png-256de8df3fa33128c692f414aa960a1f.ctex"]
+source_file="res://Assets/PNGs/LegoProjectile.png"
+dest_files=["res://.godot/imported/LegoProjectile.png-1faa08e9a4f232b8d2fee88ae23372e8.ctex"]
 
 [params]
 

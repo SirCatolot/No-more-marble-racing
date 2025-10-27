@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b8c7y32t35w22"
-path="res://.godot/imported/Playfull Rocket.ttf-cb2f320b7a4e247c4d88ffc60844c4ac.fontdata"
+uid="uid://c5pkacfkaa7dn"
+path="res://.godot/imported/Super Trend.ttf-76f9f3b45a286c70544e8b4c40bfc988.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Playfull Rocket.ttf"
-dest_files=["res://.godot/imported/Playfull Rocket.ttf-cb2f320b7a4e247c4d88ffc60844c4ac.fontdata"]
+source_file="res://Assets/Fonts/Super Trend.ttf"
+dest_files=["res://.godot/imported/Super Trend.ttf-76f9f3b45a286c70544e8b4c40bfc988.fontdata"]
 
 [params]
 
