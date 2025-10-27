@@ -8,7 +8,7 @@ const TOWER_COST := 25
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
 	if event is InputEventMouseButton and event.button_mask == 1:
-		#Left Click Down
+		# Left Click Down
 		add_child(tempTower)
 
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
@@ -17,13 +17,13 @@ func _on_gui_input(event):
 		
 		
 	elif event is InputEventMouseMotion and event.button_mask == 1:
-		#Left Click Down Drag
+		# Left Click Down Drag
 		if get_child_count() > 1:
 			get_child(1).global_position = event. global_position
 		
 	elif event is InputEventMouseButton and event.button_mask == 0:
-		#Left Click Up
-		if event.global_position.x >= 2944:	#handle canceling tower drop
+		# Left Click Up
+		if event.global_position.x >= 2944:	# Handle canceling tower drop
 			if get_child_count() > 1:
 				get_child(1).queue_free()
 		else:
