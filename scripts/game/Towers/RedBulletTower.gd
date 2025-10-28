@@ -17,13 +17,13 @@ func _process(delta):
 			get_node("BulletContainer").get_child(i).queue_free()
 
 func _on_tower_body_entered(body):
-	if "Soldier A" in body.name:
+	if "Marble A" in body.name:
 		var tempArray = []
 		currTargets = get_node("Tower").get_overlapping_bodies()
 		
 		# Filters out only the objects with "Soldier in the name (enemies)
 		for i in currTargets:
-			if "Soldier" in i.name:
+			if "Marble" in i.name:
 				tempArray.append(i)
 				
 		var currTarget = null

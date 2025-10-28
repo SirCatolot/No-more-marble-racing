@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cleouhtt7naew"]
 
-[ext_resource type="PackedScene" uid="uid://4tfhuipfl5bf" path="res://Assets/Enemies/SoldierA.tscn" id="1_m58gs"]
+[ext_resource type="PackedScene" uid="uid://4tfhuipfl5bf" path="res://Assets/Enemies/Marble A.tscn" id="1_m58gs"]
 
 [sub_resource type="Curve2D" id="Curve2D_ig7tw"]
 _data = {
@@ -16,5 +16,5 @@ position = Vector2(128, 256)
 rotation = 0.32175058
 loop = false
 
-[node name="Soldier A" parent="PathFollow2D" instance=ExtResource("1_m58gs")]
+[node name="Marble A" parent="PathFollow2D" instance=ExtResource("1_m58gs")]
 speed = 300

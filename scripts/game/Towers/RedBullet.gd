@@ -28,6 +28,6 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	
-	if "Soldier A" in body.name:
+	if "Marble A" in body.name:
 		body.Health -= bulletDamage	# Reduce enemy's health by the projectile's damage
 		queue_free()	# Remove bullet after hits target
