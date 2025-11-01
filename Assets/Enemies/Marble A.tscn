@@ -9,7 +9,7 @@
 scale = Vector2(2, 2)
 script = ExtResource("1_giws1")
 
-[node name="TowerDefenseTile245" type="Sprite2D" parent="."]
+[node name="Marble A Sprite" type="Sprite2D" parent="."]
 position = Vector2(-9.536743e-07, -9.536743e-07)
 scale = Vector2(0.025, 0.025)
 texture = ExtResource("2_uxyq1")

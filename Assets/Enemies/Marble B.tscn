@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dijrps0dkt55d"]
+
+[ext_resource type="Script" uid="uid://cpqaw2iax3sek" path="res://scripts/game/Enemies/Marble B.gd" id="1_1ekit"]
+[ext_resource type="Texture2D" uid="uid://bnok7w1511j5h" path="res://Assets/PNGs/Marble B.png" id="2_u2cx2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeaem"]
+
+[node name="Marble B" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_1ekit")
+
+[node name="Marble B Sprite" type="Sprite2D" parent="."]
+position = Vector2(-9.536743e-07, -9.536743e-07)
+scale = Vector2(0.032, 0.032)
+texture = ExtResource("2_u2cx2")
+offset = Vector2(-58, -63)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xeaem")

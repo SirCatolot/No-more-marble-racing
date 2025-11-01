@@ -17,7 +17,7 @@ func _process(delta):
 			get_node("BulletContainer").get_child(i).queue_free()
 
 func _on_tower_body_entered(body):
-	if "Marble A" in body.name:
+	if "Marble" in body.name:
 		var tempArray = []
 		currTargets = get_node("Tower").get_overlapping_bodies()
 		

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var speed = 300
+@export var speed = 350
 var Health = 10
 
 ## Move the enemy forward along its PathFollow2D path each frame,
