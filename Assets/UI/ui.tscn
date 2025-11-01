@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd0ympvrg6wyk"]
+[gd_scene load_steps=4 format=3 uid="uid://cd0ympvrg6wyk"]
 
 [ext_resource type="PackedScene" uid="uid://mmeosbj0gl42" path="res://Assets/Towers/RedTowerPanel.tscn" id="1_mlsdd"]
+[ext_resource type="PackedScene" uid="uid://bp0y4sc7fmico" path="res://Assets/Towers/BlueTowerPanel.tscn" id="3_1lv7e"]
 [ext_resource type="Script" uid="uid://hdim50yje8dv" path="res://scripts/ui/hud.gd" id="3_hud"]
 
 [node name="UI" type="CanvasLayer"]
@@ -22,12 +23,6 @@ theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 
 [node name="RedTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel2" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel3" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
 layout_mode = 2
 
 [node name="RedTowerPanel4" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
@@ -61,6 +56,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="RedTowerPanel14" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
+layout_mode = 2
+
+[node name="BlueTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("3_1lv7e")]
 layout_mode = 2
 
 [node name="HUD" type="HBoxContainer" parent="."]

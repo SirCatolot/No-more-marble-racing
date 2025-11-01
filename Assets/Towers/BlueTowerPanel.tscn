@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp0y4sc7fmico"]
+
+[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://Assets/PNGs/BlueTower.png" id="1_7xmft"]
+[ext_resource type="Script" uid="uid://csj3dwv4y7xpv" path="res://scripts/ui/BlueTowerPanel.gd" id="1_j6e3r"]
+
+[node name="BlueTowerPanel" type="Panel"]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j6e3r")
+
+[node name="TowerDefenseTile250" type="Sprite2D" parent="."]
+position = Vector2(39.97917, 39.955353)
+rotation = -1.5707964
+scale = Vector2(0.078285754, 0.078059226)
+texture = ExtResource("1_7xmft")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
