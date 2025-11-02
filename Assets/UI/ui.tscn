@@ -25,39 +25,6 @@ theme_override_constants/v_separation = 10
 [node name="RedTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
 layout_mode = 2
 
-[node name="RedTowerPanel4" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel5" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel6" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel7" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel8" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel9" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel10" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel11" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel12" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel13" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
-[node name="RedTowerPanel14" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
-layout_mode = 2
-
 [node name="BlueTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("3_1lv7e")]
 layout_mode = 2
 
@@ -82,6 +49,18 @@ text = "Lives: 20"
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Round: 1"
+
+[node name="PlayButton" type="Button" parent="."]
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -180.0
+offset_right = 420.0
+offset_bottom = -60.0
+text = "Start Next Round"
+theme_override_font_sizes/font_size = 80
 
 [node name="GameOver" type="CenterContainer" parent="."]
 visible = false

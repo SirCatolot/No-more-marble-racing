@@ -1,5 +1,8 @@
 extends Node2D
 
+signal round_started(round)
+signal round_finished(round)
+
 # Preload different enemy path scenes
 @onready var MarbleA = preload("res://Assets/Enemies/Stage 1 Marble A.tscn")
 @onready var MarbleB = preload("res://Assets/Enemies/Stage 1 Marble B.tscn")
@@ -9,12 +12,14 @@ extends Node2D
 var currentRound = 1
 var enemiesSpawned = 0
 var enemiesPerRound = 5
+var is_round_active = false
+var has_started = false
 
 func _ready():
-	# Notify HUD of starting round
+	add_to_group("path_spawner")
+	# Ahows the initial round value in UI
 	GameState.set_round(currentRound)
-	# Start timer to begin spawning enemies
-	$Timer.start()
+	$Timer.stop()
 
 ## Spawns a new enemy path instance each time the timer triggers
 func _on_timer_timeout():
@@ -40,18 +45,31 @@ func _on_timer_timeout():
 	add_child(tempPath)
 	enemiesSpawned += 1
 
-	# When enough enemies have spawned, stop timer and start next round
+	# When enough enemies have spawned allow starting next round
 	if enemiesSpawned >= enemiesPerRound:
 		$Timer.stop()
-		# Delay between rounds
-		await get_tree().create_timer(3.0).timeout
-		start_next_round()
+		is_round_active = false
+		emit_signal("round_finished", currentRound)
 	
 func start_next_round():
+	# Guard against double start
+	if is_round_active:
+		return
+	
+	# First time starting: do not increment round
+	if not has_started:
+		has_started = true
+		enemiesSpawned = 0
+		is_round_active = true
+		emit_signal("round_started", currentRound)
+		$Timer.start()
+		return
+	
+	# Subsequent rounds: advance and increase difficulty
 	currentRound += 1
 	GameState.set_round(currentRound)
 	enemiesSpawned = 0
-	
-	# Increase difficulty each rpund
 	enemiesPerRound += 2
+	is_round_active = true
+	emit_signal("round_started", currentRound)
 	$Timer.start()
