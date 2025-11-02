@@ -11,6 +11,8 @@ var enemiesSpawned = 0
 var enemiesPerRound = 5
 
 func _ready():
+	# Notify HUD of starting round
+	GameState.set_round(currentRound)
 	# Start timer to begin spawning enemies
 	$Timer.start()
 
@@ -47,6 +49,7 @@ func _on_timer_timeout():
 	
 func start_next_round():
 	currentRound += 1
+	GameState.set_round(currentRound)
 	enemiesSpawned = 0
 	
 	# Increase difficulty each rpund
