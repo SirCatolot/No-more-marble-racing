@@ -2,8 +2,18 @@ extends Panel
 
 
 @onready var tower = preload("res://Assets/Towers/RedBulletTower.tscn")
+@onready var name_label: Label = %NameLabel
+@onready var cost_label: Label = %CostLabel
+
+@export var tower_display_name := "Red Tower"
+
 var currTile
 const TOWER_COST := 25
+const DRAG_PREVIEW_SCALE := Vector2.ONE
+
+func _ready():
+	name_label.text = tower_display_name
+	cost_label.text = "$%d" % TOWER_COST
 
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
@@ -13,7 +23,7 @@ func _on_gui_input(event):
 
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
 		
-		tempTower.scale = Vector2(0.32,0.32)
+		tempTower.scale = DRAG_PREVIEW_SCALE
 		
 		
 	elif event is InputEventMouseMotion and event.button_mask == 1:
