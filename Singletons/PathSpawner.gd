@@ -11,7 +11,7 @@ signal round_finished(round)
 # Track current round and how many enemies have spawned
 var currentRound = 1
 var enemiesSpawned = 0
-var enemiesPerRound = 5
+var enemiesPerRound = 10  # Round 1 now spawns 10 marbles total
 var is_round_active = false
 var has_started = false
 
@@ -24,7 +24,7 @@ func _ready():
 ## Spawns a new enemy path instance each time the timer triggers
 func _on_timer_timeout():
 	var tempPath
-	
+
 	#Pick which enemy type to spawn based on the round
 	if currentRound == 1:
 		tempPath = MarbleA.instantiate()
@@ -41,9 +41,14 @@ func _on_timer_timeout():
 			tempPath = MarbleB.instantiate()
 		else:
 			tempPath = MarbleC.instantiate()
-			
+
 	add_child(tempPath)
 	enemiesSpawned += 1
+
+	# Round 1: After first 5 marbles, slow down spawn rate
+	if currentRound == 1 and enemiesSpawned == 5:
+		$Timer.stop()
+		$Timer.start(1.5)  # Slower spawn rate for remaining marbles
 
 	# When enough enemies have spawned allow starting next round
 	if enemiesSpawned >= enemiesPerRound:
@@ -55,16 +60,20 @@ func start_next_round():
 	# Guard against double start
 	if is_round_active:
 		return
-	
+
 	# First time starting: do not increment round
 	if not has_started:
 		has_started = true
 		enemiesSpawned = 0
 		is_round_active = true
 		emit_signal("round_started", currentRound)
-		$Timer.start()
+		# Round 1: spawn first 5 marbles quickly (0.3 second intervals)
+		if currentRound == 1:
+			$Timer.start(0.3)
+		else:
+			$Timer.start()
 		return
-	
+
 	# Subsequent rounds: advance and increase difficulty
 	currentRound += 1
 	GameState.set_round(currentRound)
