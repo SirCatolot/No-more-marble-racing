@@ -16,7 +16,7 @@ func _process(delta):
 		# If there's no valid target, clear all remaining projectiles
 		for i in get_node("BulletContainer").get_child_count():
 			get_node("BulletContainer").get_child(i).queue_free()
-# fdsfds
+
 func _on_timer_timeout():
 	# Timer fires every 4 seconds, attempt to shoot if we have a valid target
 	if is_instance_valid(curr) and can_fire:
@@ -26,7 +26,7 @@ func fire_bomb():
 	if curr == null:
 		return
 
-	# Spawn a bomb and set its damage and target path
+	# Spawn a bomb and set its damage and target
 	var tempBomb = Bomb.instantiate()
 	tempBomb.pathName = pathName
 	tempBomb.bombDamage = bombDamage
