@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_bomb")
 position = Vector2(0, -64)
 
 [node name="TowerSprite" type="Sprite2D" parent="."]
+rotation = 1.5707964
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("2_1e5bx")
 
