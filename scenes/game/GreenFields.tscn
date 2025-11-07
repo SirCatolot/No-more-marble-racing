@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxf71vgj2im6q"]
+[gd_scene load_steps=6 format=3 uid="uid://cxf71vgj2im6q"]
 
 [ext_resource type="PackedScene" uid="uid://bbfk382r3favt" path="res://Tiles/tile_map.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bgcgvwb50x2vv" path="res://Singletons/PathSpawner.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cd0ympvrg6wyk" path="res://Assets/UI/ui.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://scripts/game/main.gd" id="4_main"]
+
+[sub_resource type="Curve2D" id="Curve2D_x5kws"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -783.23926, 556.7112, 0, 0, 0, 0, -470.23926, 561.7112, 0, 0, 0, 0, -383.23926, 637.7112, 0, 0, 0, 0, -11.239258, 635.7112, 0, 0, 0, 0, 66.76074, 701.7112, 0, 0, 0, 0, 298.76074, 697.7112, 0, 0, 0, 0, 364.76074, 758.7112, 0, 0, 0, 0, 661.76074, 766.7112, 0, 0, 0, 0, 690.76074, 809.7112, 0, 0, 0, 0, 811.76074, 816.7112, 0, 0, 0, 0, 869.76074, 879.7112, 0, 0, 0, 0, 873.76074, 1086.7112, 0, 0, 0, 0, 833.76074, 1156.7112, 0, 0, 0, 0, 748.76074, 1198.7112, 0, 0, 0, 0, 670.76074, 1231.7112, 0, 0, 0, 0, 545.76074, 1325.7112, 0, 0, 0, 0, 31.760742, 1323.7112, 0, 0, 0, 0, -23.239258, 1260.7112, 0, 0, 0, 0, -111.23926, 1194.7112, 0, 0, 0, 0, -214.23926, 1264.7112, 0, 0, 0, 0, -216.23926, 1380.7112, 0, 0, 0, 0, -280.23926, 1389.7112, 0, 0, 0, 0, -282.23926, 1698.7112, 0, 0, 0, 0, -216.23926, 1777.7112, 0, 0, 0, 0, -142.23926, 1774.7112, 0, 0, 0, 0, -96.23926, 1843.7112, 0, 0, 0, 0, 118.76074, 1843.7112, 0, 0, 0, 0, 161.76074, 1911.7112, 0, 0, 0, 0, 433.76074, 1909.7112, 0, 0, 0, 0, 435.76074, 1975.7112, 0, 0, 0, 0, 875.76074, 1969.7112, 0, 0, 0, 0, 942.76074, 2048.7112, 0, 0, 0, 0, 1640.7607, 2045.7112, 0, 0, 0, 0, 1707.7607, 1969.7112, 0, 0, 0, 0, 1773.7607, 1966.7112, 0, 0, 0, 0, 1842.7607, 1906.7112, 0, 0, 0, 0, 1834.7607, 1759.7112, 0, 0, 0, 0, 1902.7607, 1713.7112, 0, 0, 0, 0, 1894.7607, 1499.7112, 0, 0, 0, 0, 1963.7607, 1463.7112, 0, 0, 0, 0, 1963.7607, 1331.7112, 0, 0, 0, 0, 2037.7607, 1331.7112, 0, 0, 0, 0, 2023.7607, 1247.7112, 0, 0, 0, 0, 2089.7607, 1194.7112, 0, 0, 0, 0, 2282.7607, 1014.7112, 0, 0, 0, 0, 2809.7607, 1011.7112)
+}
+point_count = 46
 
 [node name="Main" type="Node2D"]
 script = ExtResource("4_main")
@@ -15,10 +21,13 @@ layer_0/tile_data = PackedInt32Array(0, 262144, 5, 65536, 262144, 5, 131072, 262
 script = ExtResource("2_0xm2m")
 
 [node name="Timer" type="Timer" parent="PathSpawner"]
-autostart = false
 
 [node name="Towers" type="Node2D" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("3_h2yge")]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(757.23926, -275.71118)
+curve = SubResource("Curve2D_x5kws")
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]

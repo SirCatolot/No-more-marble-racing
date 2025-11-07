@@ -229,7 +229,8 @@ script/source = "extends Panel
 @onready var options_title: Label = $Options/OptionsTitle
 
 func _ready():
-	pass"
+	pass
+"
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_e2per"]
 
