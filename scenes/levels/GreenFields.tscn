@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://cxf71vgj2im6q"]
 
-[ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://main.gd" id="1_rc7o8"]
+[ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://singletons/main.gd" id="1_rc7o8"]
 [ext_resource type="Texture2D" uid="uid://cvhb2ksvhd55d" path="res://assets/pngs/towerDefense_tilesheet.png" id="2_krcn6"]
 [ext_resource type="Texture2D" uid="uid://bws4tmj6gwwt5" path="res://assets/pngs/Tree Sprite.png" id="3_f5tsq"]
 [ext_resource type="Texture2D" uid="uid://cb7hvg0jedivi" path="res://assets/pngs/Grass Sprite.png" id="4_6bnp6"]
 [ext_resource type="Texture2D" uid="uid://c1vextro1k5lr" path="res://assets/pngs/Dirt.png" id="5_cfr3n"]
 [ext_resource type="Script" uid="uid://bgcgvwb50x2vv" path="res://singletons/path_spawner_stage_1.gd" id="6_8okol"]
-[ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/UserInterFace.tscn" id="7_e4tj8"]
+[ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/InGameInterface.tscn" id="7_e4tj8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blwmw"]
 texture = ExtResource("2_krcn6")

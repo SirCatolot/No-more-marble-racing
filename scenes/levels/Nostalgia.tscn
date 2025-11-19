@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgv3bsl6o7koe"]
 
-[ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://main.gd" id="1_www5v"]
+[ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://singletons/main.gd" id="1_www5v"]
 [ext_resource type="Texture2D" uid="uid://41pitx1to8d3" path="res://assets/pngs/testing.png" id="2_gopqc"]
 [ext_resource type="Texture2D" uid="uid://cu6c6uj8l8wa7" path="res://assets/pngs/PipeTexture.png" id="3_b28yd"]
 [ext_resource type="Script" uid="uid://cxtrxqs7qng7w" path="res://singletons/path_spawner_stage_3.gd" id="4_tbbyu"]
-[ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/UserInterFace.tscn" id="5_8ntdy"]
+[ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/InGameInterface.tscn" id="5_8ntdy"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_www5v")
