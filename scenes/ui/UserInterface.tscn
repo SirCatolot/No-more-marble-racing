@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://clo7v7uqr5a11"]
+[gd_scene load_steps=6 format=3 uid="uid://cd0ympvrg6wyk"]
 
 [ext_resource type="PackedScene" uid="uid://mmeosbj0gl42" path="res://assets/towers/RedTowerPanel.tscn" id="1_mlsdd"]
 [ext_resource type="PackedScene" uid="uid://d37x6lvfuhs7d" path="res://assets/towers/BlueTowerPanel.tscn" id="3_1lv7e"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbfk382r3favt"]
 
-[ext_resource type="Texture2D" uid="uid://cvhb2ksvhd55d" path="res://tower-defense-top-down/Tilesheet/towerDefense_tilesheet.png" id="1_27r4s"]
+[ext_resource type="Texture2D" uid="uid://cvhb2ksvhd55d" path="res://assets/pngs/towerDefense_tilesheet.png" id="1_27r4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blwmw"]
 texture = ExtResource("1_27r4s")
@@ -4435,3 +4435,4 @@ sources/0 = SubResource("TileSetAtlasSource_blwmw")
 tile_set = SubResource("TileSet_0tghu")
 rendering_quadrant_size = 64
 format = 2
+layer_0/tile_data = PackedInt32Array(0, 196608, 6, 4, 1245184, 10)

@@ -1,17 +1,17 @@
 [gd_scene load_steps=31 format=3 uid="uid://devgswfjqsjj8"]
 
-[ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
-[ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://Assets/UI/pngs/TitleScreenBackground.png" id="2_iwbf0"]
-[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Assets/Fonts/Super Trend.ttf" id="3_2ysvc"]
-[ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://Assets/Fonts/Playfull Rocket.ttf" id="4_2ysvc"]
-[ext_resource type="AudioStream" uid="uid://dcrcipxb02y82" path="res://Assets/Audio/ball-in-hole-99750.mp3" id="5_bhu4a"]
-[ext_resource type="AudioStream" uid="uid://wubljofrr5vr" path="res://Assets/Audio/marble-83124.mp3" id="6_e2per"]
-[ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://Assets/Audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_e2per"]
-[ext_resource type="Script" uid="uid://cptrjck1m7d1v" path="res://scenes/ui/audio_control.gd" id="8_7mi0g"]
-[ext_resource type="Script" uid="uid://bg3r6n305o3n5" path="res://scenes/ui/full_screen_control.gd" id="9_nqjyj"]
+[ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/ui/main_menu.gd" id="1_q85j6"]
+[ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://assets/pngs/TitleScreenBackground.png" id="2_8g5eo"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="3_7suek"]
+[ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://assets/fonts/Playfull Rocket.ttf" id="4_otr3d"]
+[ext_resource type="AudioStream" uid="uid://wubljofrr5vr" path="res://assets/audio/marble-83124.mp3" id="5_8ekit"]
+[ext_resource type="AudioStream" uid="uid://dcrcipxb02y82" path="res://assets/audio/ball-in-hole-99750.mp3" id="6_n4uci"]
+[ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://assets/audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_877pj"]
+[ext_resource type="Script" uid="uid://cptrjck1m7d1v" path="res://scenes/ui/audio_control.gd" id="8_ayp64"]
+[ext_resource type="Script" uid="uid://bg3r6n305o3n5" path="res://scenes/ui/full_screen_control.gd" id="9_y2j7i"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpiny"]
-texture = ExtResource("2_iwbf0")
+texture = ExtResource("2_8g5eo")
 modulate_color = Color(0.50140655, 0.5014065, 0.5014065, 1)
 
 [sub_resource type="Animation" id="Animation_xpiny"]
@@ -246,7 +246,7 @@ offset_right = -4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vjtqc")
+script = ExtResource("1_q85j6")
 metadata/_edit_vertical_guides_ = [-575.0]
 
 [node name="MenuBackgroundPicture" type="Panel" parent="."]
@@ -276,7 +276,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/normal_font = ExtResource("3_2ysvc")
+theme_override_fonts/normal_font = ExtResource("3_7suek")
 theme_override_font_sizes/normal_font_size = 211
 bbcode_enabled = true
 text = "[color=black]No  More  Marbles"
@@ -298,7 +298,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/shadow_outline_size = 10
 theme_override_constants/shadow_offset_x = 11
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/normal_font = ExtResource("3_2ysvc")
+theme_override_fonts/normal_font = ExtResource("3_7suek")
 theme_override_font_sizes/normal_font_size = 211
 bbcode_enabled = true
 text = "[color=red]No [color=green] More [color=yellow] Marbles"
@@ -331,7 +331,7 @@ theme_override_constants/separation = 39
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_fonts/font = ExtResource("4_otr3d")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_6jbdy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7mi0g")
@@ -343,7 +343,7 @@ text = "Start Game "
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_fonts/font = ExtResource("4_otr3d")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_clp4r")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ee60a")
@@ -356,7 +356,7 @@ text = "Options
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_fonts/font = ExtResource("4_otr3d")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_xpiny")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bhu4a")
@@ -366,14 +366,14 @@ text = "Quit
 "
 
 [node name="ClickSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_e2per")
+stream = ExtResource("5_8ekit")
 
 [node name="HoverSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_bhu4a")
+stream = ExtResource("6_n4uci")
 volume_db = 8.0
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_e2per")
+stream = ExtResource("7_877pj")
 volume_db = -12.0
 autoplay = true
 bus = &"Music"
@@ -402,7 +402,7 @@ offset_top = 51.0
 offset_bottom = 208.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_fonts/font = ExtResource("4_otr3d")
 theme_override_font_sizes/font_size = 76
 text = "Options
 "
@@ -423,7 +423,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_fonts/font = ExtResource("4_otr3d")
 theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_xpiny")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bhu4a")
@@ -443,7 +443,7 @@ offset_right = 322.5
 offset_bottom = -42.0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_2ysvc")
+theme_override_fonts/font = ExtResource("3_7suek")
 theme_override_font_sizes/font_size = 45
 text = "Music Volume"
 
@@ -468,7 +468,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_7vr37")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("8_7mi0g")
+script = ExtResource("8_ayp64")
 audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckButton" parent="Options"]
@@ -479,10 +479,10 @@ offset_right = 383.85764
 offset_bottom = 397.02203
 scale = Vector2(2.265, 2.265)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_2ysvc")
+theme_override_fonts/font = ExtResource("3_7suek")
 theme_override_font_sizes/font_size = 22
 expand_icon = true
-script = ExtResource("9_nqjyj")
+script = ExtResource("9_y2j7i")
 
 [node name="FullScreenText" type="Label" parent="Options"]
 layout_mode = 0
@@ -491,7 +491,7 @@ offset_top = 371.0
 offset_right = 321.5
 offset_bottom = 436.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_2ysvc")
+theme_override_fonts/font = ExtResource("3_7suek")
 theme_override_font_sizes/font_size = 45
 text = "FullScreen"
 

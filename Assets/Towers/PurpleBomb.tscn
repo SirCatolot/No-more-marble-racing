@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4xykh0oegh1c"]
 
-[ext_resource type="Script" uid="uid://dx2rrat53lra4" path="res://scripts/game/Towers/PurpleBomb.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://ce7lk1funl3dd" path="res://Assets/PNGs/PurpleTowerProjectile.png" id="2_kk0aq"]
+[ext_resource type="Script" uid="uid://dx2rrat53lra4" path="res://scripts/game/towers/purple_bomb.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ce7lk1funl3dd" path="res://assets/pngs/PurpleTowerProjectile.png" id="2_kk0aq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bomb"]
 radius = 16.0

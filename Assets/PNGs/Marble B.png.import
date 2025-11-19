@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnok7w1511j5h"
-path="res://.godot/imported/Marble B.png-e3ce7a1ee537ac239fcc3e5a1fd369ac.ctex"
+path="res://.godot/imported/Marble B.png-dac22376dab03be9661d0b498e1a5bd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PNGs/Marble B.png"
-dest_files=["res://.godot/imported/Marble B.png-e3ce7a1ee537ac239fcc3e5a1fd369ac.ctex"]
+source_file="res://assets/pngs/Marble B.png"
+dest_files=["res://.godot/imported/Marble B.png-dac22376dab03be9661d0b498e1a5bd2.ctex"]
 
 [params]
 

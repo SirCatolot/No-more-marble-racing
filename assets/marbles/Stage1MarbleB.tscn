@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhfxbhs4lwapg"]
 
-[ext_resource type="PackedScene" uid="uid://dijrps0dkt55d" path="res://Assets/Enemies/Marble B.tscn" id="1_51l0c"]
+[ext_resource type="PackedScene" uid="uid://dijrps0dkt55d" path="res://assets/marbles/MarbleB.tscn" id="1_51l0c"]
 
 [sub_resource type="Curve2D" id="Curve2D_cibki"]
 _data = {

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d37x6lvfuhs7d"]
 
-[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://Assets/PNGs/BlueTower.png" id="1_7xmft"]
-[ext_resource type="Script" uid="uid://csj3dwv4y7xpv" path="res://scripts/ui/BlueTowerPanel.gd" id="1_j6e3r"]
-[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Assets/Fonts/Super Trend.ttf" id="3_233aj"]
+[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://assets/pngs/BlueTower.png" id="1_7xmft"]
+[ext_resource type="Script" uid="uid://csj3dwv4y7xpv" path="res://scripts/ui/blue_tower_panel.gd" id="1_j6e3r"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="3_233aj"]
 
 [node name="BlueTowerPanel" type="Panel"]
 custom_minimum_size = Vector2(480, 200)
