@@ -1,7 +1,7 @@
 extends Panel
 
 
-@onready var tower = preload("res://assets/towers/BlueArrowTower.tscn")
+@onready var tower = preload("res://scenes/towers/BlueArrowTower.tscn")
 @onready var name_label: Label = %NameLabel
 @onready var cost_label: Label = %CostLabel
 
