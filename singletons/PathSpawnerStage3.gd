@@ -4,9 +4,9 @@ signal round_started(round)
 signal round_finished(round)
 
 # Preload different enemy path scenes
-@onready var MarbleA = preload("res://Assets/Enemies/Stage 3 Marble A.tscn")
-@onready var MarbleB = preload("res://Assets/Enemies/Stage 3 Marble B.tscn")
-@onready var MarbleC = preload("res://Assets/Enemies/Stage 3 Marble C.tscn")
+@onready var MarbleA = preload("res://Assets/marbles/Stage 3 Marble A.tscn")
+@onready var MarbleB = preload("res://Assets/marbles/Stage 3 Marble B.tscn")
+@onready var MarbleC = preload("res://Assets/marbles/Stage 3 Marble C.tscn")
 
 # Track current round and how many enemies have spawned
 var currentRound = 1

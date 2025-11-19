@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dorgkxh7beqww"
-path="res://.godot/imported/BlueTower.png-e7fca932c1f91782a1c1dc74a0d1abd7.ctex"
+path="res://.godot/imported/BlueTower.png-d4489fccc36b23d2e8cae0f561506772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pngs/BlueTower.png"
-dest_files=["res://.godot/imported/BlueTower.png-e7fca932c1f91782a1c1dc74a0d1abd7.ctex"]
+source_file="res://Assets/PNGs/BlueTower.png"
+dest_files=["res://.godot/imported/BlueTower.png-d4489fccc36b23d2e8cae0f561506772.ctex"]
 
 [params]
 
