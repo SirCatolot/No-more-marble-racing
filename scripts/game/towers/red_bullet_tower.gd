@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-var Bullet = preload("res://Assets/Towers/RedBullet.tscn")	# Preload bullet scene so new bullets can be spawned quickly
+var Bullet = preload("res://assets/towers/RedBullet.tscn")	# Preload bullet scene so new bullets can be spawned quickly
 var bulletDamage = 5
 var pathName
 var currTargets = []

@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-var Bomb = preload("res://Assets/Towers/PurpleBomb.tscn")
+var Bomb = preload("res://assets/towers/PurpleBomb.tscn")
 var bombDamage = 10  # Enough to kill a basic marble (Health = 10)
 var pathName
 var currTargets = []

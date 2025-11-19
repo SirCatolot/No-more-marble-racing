@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-var Bullet = preload("res://Assets/Towers/BlueArrow.tscn")	# Preload bullet scene so new bullets can be spawned quickly
+var Bullet = preload("res://assets/towers/BlueArrow.tscn")	# Preload bullet scene so new bullets can be spawned quickly
 var bulletDamage = 5
 var pierceCount = 3  # How many marbles each arrow can pierce
 var fireRate = 1.0  # Shots per second
