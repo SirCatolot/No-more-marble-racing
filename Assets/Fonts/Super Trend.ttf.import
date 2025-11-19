@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c5pkacfkaa7dn"
-path="res://.godot/imported/Super Trend.ttf-76f9f3b45a286c70544e8b4c40bfc988.fontdata"
+path="res://.godot/imported/Super Trend.ttf-7e98398423c08be971a150233fe3a96a.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Super Trend.ttf"
-dest_files=["res://.godot/imported/Super Trend.ttf-76f9f3b45a286c70544e8b4c40bfc988.fontdata"]
+source_file="res://assets/fonts/Super Trend.ttf"
+dest_files=["res://.godot/imported/Super Trend.ttf-7e98398423c08be971a150233fe3a96a.fontdata"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b8c7y32t35w22"
-path="res://.godot/imported/Playfull Rocket.ttf-7406e88670af3a0a6ee0c89d9027b83e.fontdata"
+path="res://.godot/imported/Playfull Rocket.ttf-d9562c709ec4ed948d024c2fbe3bd3e8.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Playfull Rocket.ttf"
-dest_files=["res://.godot/imported/Playfull Rocket.ttf-7406e88670af3a0a6ee0c89d9027b83e.fontdata"]
+source_file="res://assets/fonts/Playfull Rocket.ttf"
+dest_files=["res://.godot/imported/Playfull Rocket.ttf-d9562c709ec4ed948d024c2fbe3bd3e8.fontdata"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd0ympvrg6wyk"]
 
-[ext_resource type="PackedScene" uid="uid://mmeosbj0gl42" path="res://Assets/Towers/RedTowerPanel.tscn" id="1_mlsdd"]
-[ext_resource type="PackedScene" uid="uid://d37x6lvfuhs7d" path="res://Assets/Towers/BlueTowerPanel.tscn" id="3_1lv7e"]
+[ext_resource type="PackedScene" uid="uid://mmeosbj0gl42" path="res://assets/towers/RedTowerPanel.tscn" id="1_mlsdd"]
+[ext_resource type="PackedScene" uid="uid://d37x6lvfuhs7d" path="res://assets/towers/BlueTowerPanel.tscn" id="3_1lv7e"]
 [ext_resource type="Script" uid="uid://hdim50yje8dv" path="res://scripts/ui/hud.gd" id="3_hud"]
-[ext_resource type="PackedScene" uid="uid://dr4xmtic23lq1" path="res://Assets/Towers/PurpleTowerPanel.tscn" id="4_purple"]
-[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Assets/Fonts/Super Trend.ttf" id="5_0dwhk"]
+[ext_resource type="PackedScene" uid="uid://dr4xmtic23lq1" path="res://assets/towers/PurpleTowerPanel.tscn" id="4_purple"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="5_0dwhk"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("3_hud")
