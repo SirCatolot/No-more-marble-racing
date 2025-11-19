@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var lives_label: Label = $HUD/LivesLabel
 @onready var round_label: Label = $HUD/RoundLabel
 @onready var game_over_layer: Control = $GameOver
-@onready var play_button: Button = $PlayButton
+@onready var play_button: Button = $Panel/NextRoundButton
 
 var spawner: Node = null
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bbfk382r3favt" path="res://Tiles/tile_map.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bgcgvwb50x2vv" path="res://Singletons/PathSpawner.gd" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://cd0ympvrg6wyk" path="res://Assets/UI/ui.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cd0ympvrg6wyk" path="res://scenes/ui/ui.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://scripts/game/main.gd" id="4_main"]
 
 [node name="Main" type="Node2D"]
@@ -15,7 +15,6 @@ layer_0/tile_data = PackedInt32Array(0, 262144, 5, 65536, 262144, 5, 131072, 262
 script = ExtResource("2_0xm2m")
 
 [node name="Timer" type="Timer" parent="PathSpawner"]
-autostart = false
 
 [node name="Towers" type="Node2D" parent="."]
 

@@ -14,6 +14,9 @@ extends Control
 	
 
 func _ready():
+	print("Main Menu Script running on: ", get_path())
+	print("Children: ", get_children())
+	
 	if not menu_music.playing:
 		menu_music.play()
 		menu_music.create_tween().tween_property(menu_music, "volume_db", -12, 1.5)
