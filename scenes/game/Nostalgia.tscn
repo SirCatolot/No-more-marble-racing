@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c6ysp2t13h38l" path="res://scripts/game/main.gd" id="1_k2wo5"]
 [ext_resource type="Texture2D" uid="uid://41pitx1to8d3" path="res://MapSprites/testing.png" id="2_wqus3"]
-[ext_resource type="PackedScene" uid="uid://cd0ympvrg6wyk" path="res://Assets/UI/ui.tscn" id="4_cnlc6"]
-[ext_resource type="Script" uid="uid://cxtrxqs7qng7w" path="res://Singletons/PathSpawnerStage3.gd" id="4_wqus3"]
+[ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/ui.tscn" id="4_cnlc6"]
+[ext_resource type="Script" uid="uid://cxtrxqs7qng7w" path="res://singletons/path_spawner_stage_3.gd" id="4_wqus3"]
 [ext_resource type="Texture2D" uid="uid://cu6c6uj8l8wa7" path="res://MapSprites/PipeTexture.png" id="5_oangv"]
 
 [node name="Main" type="Node2D"]
