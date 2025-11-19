@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://mmeosbj0gl42"]
+[gd_scene load_steps=4 format=3 uid="uid://byjues027e07p"]
 
 [ext_resource type="Script" uid="uid://gt0i3voo2tuh" path="res://scripts/ui/red_tower_panel.gd" id="1_buc56"]
 [ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://assets/towers/RedBlockTower.png" id="2_buc56"]

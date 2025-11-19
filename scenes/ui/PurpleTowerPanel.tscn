@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr4xmtic23lq1"]
+[gd_scene load_steps=3 format=3 uid="uid://bjenqlg6yctq3"]
 
 [ext_resource type="Script" uid="uid://r0jgc42j8cau" path="res://scripts/ui/purple_tower_panel.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://c3i6jd7u007pi" path="res://assets/towers/PurpleTower.png" id="2_1ru3a"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d37x6lvfuhs7d"]
+[gd_scene load_steps=4 format=3 uid="uid://bp0y4sc7fmico"]
 
 [ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://assets/towers/BlueTower.png" id="1_7xmft"]
 [ext_resource type="Script" uid="uid://csj3dwv4y7xpv" path="res://scripts/ui/blue_tower_panel.gd" id="1_j6e3r"]
