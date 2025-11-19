@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce7lk1funl3dd"
-path="res://.godot/imported/PurpleTowerProjectile.png-a46c6988810ac8dbb024b21ad55dcfe9.ctex"
+path="res://.godot/imported/PurpleTowerProjectile.png-9383a1b6c7a4e19e414b4cf65b88b508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PNGs/PurpleTowerProjectile.png"
-dest_files=["res://.godot/imported/PurpleTowerProjectile.png-a46c6988810ac8dbb024b21ad55dcfe9.ctex"]
+source_file="res://assets/pngs/PurpleTowerProjectile.png"
+dest_files=["res://.godot/imported/PurpleTowerProjectile.png-9383a1b6c7a4e19e414b4cf65b88b508.ctex"]
 
 [params]
 

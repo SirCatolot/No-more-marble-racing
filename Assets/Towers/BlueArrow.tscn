@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cavuirb7wsnkk"]
 
-[ext_resource type="Script" path="res://scripts/game/Towers/BlueArrow.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://ba5pvgvh1eyph" path="res://Assets/PNGs/BlueArrow.png" id="1_0se4k"]
+[ext_resource type="Script" uid="uid://vclrnouq5uea" path="res://scripts/game/towers/blue_arrow.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ba5pvgvh1eyph" path="res://assets/pngs/BlueArrow.png" id="1_0se4k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avvd0"]
 radius = 8.0

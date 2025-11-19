@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dp4iedlbieor3"]
 
-[ext_resource type="Script" path="res://scripts/game/Towers/BlueArrowTower.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://Assets/PNGs/BlueTower.png" id="1_wplqs"]
+[ext_resource type="Script" uid="uid://jcf1ucvg5fvs" path="res://scripts/game/towers/blue_arrow_tower.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://assets/pngs/BlueTower.png" id="1_wplqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3xm7"]
 size = Vector2(128, 128)

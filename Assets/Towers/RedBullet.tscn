@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drbn5sktq7mjt"]
 
-[ext_resource type="Script" uid="uid://mlhrcajhm1yk" path="res://scripts/game/Towers/RedBullet.gd" id="1_o5hhi"]
-[ext_resource type="Texture2D" uid="uid://c2uymshnim43a" path="res://Assets/PNGs/LegoProjectile.png" id="2_o5hhi"]
+[ext_resource type="Script" uid="uid://mlhrcajhm1yk" path="res://scripts/game/towers/red_bullet.gd" id="1_o5hhi"]
+[ext_resource type="Texture2D" uid="uid://c2uymshnim43a" path="res://assets/pngs/LegoProjectile.png" id="2_o5hhi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5hhi"]
 radius = 8.0

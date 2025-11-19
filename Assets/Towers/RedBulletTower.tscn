@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj0pv0roaae40"]
 
-[ext_resource type="Script" uid="uid://f8ic8itlyb30" path="res://scripts/game/Towers/RedBulletTower.gd" id="1_egtsc"]
-[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://Assets/PNGs/RedBlockTower.png" id="2_egtsc"]
+[ext_resource type="Script" uid="uid://f8ic8itlyb30" path="res://scripts/game/towers/red_bullet_tower.gd" id="1_egtsc"]
+[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://assets/pngs/RedBlockTower.png" id="2_egtsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rlos"]
 size = Vector2(128, 128)

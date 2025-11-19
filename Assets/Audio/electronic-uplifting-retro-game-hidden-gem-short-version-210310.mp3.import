@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dotmhpc5tv1qt"
-path="res://.godot/imported/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3-0a9aa2a10dab6deafb645ce6fc36f59c.mp3str"
+path="res://.godot/imported/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3-34a5e57b29752dee7ec9833c87d9eb7f.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3"
-dest_files=["res://.godot/imported/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3-0a9aa2a10dab6deafb645ce6fc36f59c.mp3str"]
+source_file="res://assets/audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3"
+dest_files=["res://.godot/imported/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3-34a5e57b29752dee7ec9833c87d9eb7f.mp3str"]
 
 [params]
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbgc4e7aol7lg"]
+[gd_scene load_steps=3 format=3 uid="uid://cleouhtt7naew"]
 
-[ext_resource type="PackedScene" uid="uid://cvuf0b6bhepb0" path="res://Assets/Enemies/Marble C.tscn" id="1_pvypw"]
+[ext_resource type="PackedScene" uid="uid://4tfhuipfl5bf" path="res://assets/marbles/MarbleA.tscn" id="1_cibki"]
 
 [sub_resource type="Curve2D" id="Curve2D_ig7tw"]
 _data = {
@@ -16,5 +16,4 @@ position = Vector2(128, 256)
 rotation = 0.32175058
 loop = false
 
-[node name="Marble C" parent="PathFollow2D" instance=ExtResource("1_pvypw")]
-position = Vector2(2.3841858e-06, 5.9604645e-06)
+[node name="Marble A" parent="PathFollow2D" instance=ExtResource("1_cibki")]
