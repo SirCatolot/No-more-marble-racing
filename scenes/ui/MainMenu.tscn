@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://devgswfjqsjj8"]
+[gd_scene load_steps=31 format=3 uid="uid://devgswfjqsjj8"]
 
 [ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
 [ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://Assets/UI/pngs/TitleScreenBackground.png" id="2_iwbf0"]
@@ -221,16 +221,6 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 shadow_size = 3
 
-[sub_resource type="GDScript" id="GDScript_nqjyj"]
-script/source = "extends Panel
-
-
-@onready var options_panel: Panel = $Options
-@onready var options_title: Label = $Options/OptionsTitle
-
-func _ready():
-	pass"
-
 [sub_resource type="CanvasTexture" id="CanvasTexture_e2per"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_7mi0g"]
@@ -403,7 +393,6 @@ offset_bottom = 492.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqw28")
-script = SubResource("GDScript_nqjyj")
 
 [node name="OptionsTitle" type="Label" parent="Options"]
 layout_mode = 1
