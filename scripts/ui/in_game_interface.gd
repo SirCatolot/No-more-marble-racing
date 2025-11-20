@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var money_label: Label = $HUD/MoneyLabel
-@onready var lives_label: Label = $HUD/LivesLabel
-@onready var round_label: Label = $HUD/RoundLabel
+@onready var money_label: Label = $HUD/MoneyPanel/MoneyContainer/MoneyLabel
+@onready var lives_label: Label = $HUD/LivesPanel/LivesContainer/LivesLabel
+@onready var round_label: Label = $HUD/RoundPanel/RoundLabel
 @onready var game_over_layer: Control = $GameOver
 @onready var play_button: Button = $Panel/NextRoundButton
 @onready var options_button: Button = $HUD/OptionsButton
@@ -35,10 +35,10 @@ func _ready() -> void:
 	options_button.pressed.connect(_on_options_button_pressed)
 
 func _on_money_changed(m: int) -> void:
-	money_label.text = "Money: %d" % m
+	money_label.text = "%d" % m
 
 func _on_lives_changed(l: int) -> void:
-	lives_label.text = "Lives: %d" % l
+	lives_label.text = "%d" % l
 
 func _on_round_changed(r: int) -> void:
 	round_label.text = "Round: %d" % r

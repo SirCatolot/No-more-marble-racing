@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://clo7v7uqr5a11"]
+[gd_scene load_steps=13 format=3 uid="uid://clo7v7uqr5a11"]
 
 [ext_resource type="PackedScene" uid="uid://byjues027e07p" path="res://scenes/ui/RedTowerPanel.tscn" id="1_mlsdd"]
 [ext_resource type="PackedScene" uid="uid://bp0y4sc7fmico" path="res://scenes/ui/BlueTowerPanel.tscn" id="3_1lv7e"]
@@ -6,8 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://bjenqlg6yctq3" path="res://scenes/ui/PurpleTowerPanel.tscn" id="4_purple"]
 [ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="5_0dwhk"]
 [ext_resource type="Texture2D" uid="uid://cs42nr2p32nu5" path="res://assets/pngs/settings (3).png" id="6_1n8bo"]
+[ext_resource type="Texture2D" uid="uid://eqkcavfcfthm" path="res://assets/pngs/heart.png" id="6_ttyr8"]
+[ext_resource type="Texture2D" uid="uid://cirowwml5t8ct" path="res://assets/pngs/dollar (1).png" id="6_vbmmi"]
 [ext_resource type="PackedScene" uid="uid://cerqikuovbh7s" path="res://scenes/main_menu/Options.tscn" id="7_a32kq"]
 [ext_resource type="Script" uid="uid://dn1lm2o7i4wss" path="res://scripts/main_menu/options.gd" id="8_yfpsd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfpsd"]
+bg_color = Color(0.51230276, 0.49376452, 0.56171715, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a32kq"]
 bg_color = Color(0, 0.6896546, 0.66487616, 1)
@@ -55,29 +69,66 @@ theme_override_font_sizes/font_size = 80
 text = "Start Next Round"
 
 [node name="HUD" type="HBoxContainer" parent="."]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 2873.0
-offset_bottom = 229.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 2876.0
+offset_bottom = 183.0
+size_flags_horizontal = 3
 theme_override_constants/separation = 100
 
-[node name="MoneyLabel" type="Label" parent="HUD"]
+[node name="MoneyPanel" type="PanelContainer" parent="HUD"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_0dwhk")
-theme_override_font_sizes/font_size = 100
-text = "Money: 100"
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
 
-[node name="LivesLabel" type="Label" parent="HUD"]
+[node name="MoneyContainer" type="HBoxContainer" parent="HUD/MoneyPanel"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_0dwhk")
-theme_override_font_sizes/font_size = 100
-text = "Lives: 20"
+theme_override_constants/separation = -10
 
-[node name="RoundLabel" type="Label" parent="HUD"]
+[node name="MoneyIcon" type="TextureRect" parent="HUD/MoneyPanel/MoneyContainer"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+texture = ExtResource("6_vbmmi")
+
+[node name="MoneyLabel" type="Label" parent="HUD/MoneyPanel/MoneyContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_0dwhk")
+theme_override_font_sizes/font_size = 100
+text = "100"
+
+[node name="LivesPanel" type="PanelContainer" parent="HUD"]
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
+
+[node name="LivesContainer" type="HBoxContainer" parent="HUD/LivesPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 19
+
+[node name="LivesIcon" type="TextureRect" parent="HUD/LivesPanel/LivesContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+texture = ExtResource("6_ttyr8")
+
+[node name="LivesLabel" type="Label" parent="HUD/LivesPanel/LivesContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_0dwhk")
+theme_override_font_sizes/font_size = 100
+text = "20"
+
+[node name="RoundPanel" type="PanelContainer" parent="HUD"]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
+
+[node name="RoundLabel" type="Label" parent="HUD/RoundPanel"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 100
-text = "Round: 1"
+text = " Round: 1"
 
 [node name="OptionsButton" type="Button" parent="HUD"]
 custom_minimum_size = Vector2(128, 128)
