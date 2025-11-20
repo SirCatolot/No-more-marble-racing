@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var round_label: Label = $HUD/RoundLabel
 @onready var game_over_layer: Control = $GameOver
 @onready var play_button: Button = $Panel/NextRoundButton
+@onready var options_button: Button = $HUD/OptionsButton
+@onready var options_panel: Panel = $Options
 
 var spawner: Node = null
 
@@ -26,6 +28,11 @@ func _ready() -> void:
 	_on_money_changed(GameState.money)
 	_on_lives_changed(GameState.lives)
 	_on_round_changed(GameState.current_round)
+	
+	options_panel.visible = false
+	options_panel.show_quit_button = true
+	options_panel._update_buttons()
+	options_button.pressed.connect(_on_options_button_pressed)
 
 func _on_money_changed(m: int) -> void:
 	money_label.text = "Money: %d" % m
@@ -43,6 +50,10 @@ func _on_play_button_pressed() -> void:
 	if spawner != null:
 		spawner.start_next_round()
 	play_button.disabled = true
+	
+func _on_options_button_pressed():
+	options_panel.visible = true
+	
 
 func _on_round_started(_r: int) -> void:
 	play_button.disabled = true

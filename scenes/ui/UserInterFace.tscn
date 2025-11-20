@@ -1,16 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://clo7v7uqr5a11"]
+[gd_scene load_steps=6 format=3 uid="uid://b8efq20tv24it"]
 
 [ext_resource type="PackedScene" uid="uid://byjues027e07p" path="res://scenes/ui/RedTowerPanel.tscn" id="1_mlsdd"]
 [ext_resource type="PackedScene" uid="uid://bp0y4sc7fmico" path="res://scenes/ui/BlueTowerPanel.tscn" id="3_1lv7e"]
 [ext_resource type="Script" uid="uid://hdim50yje8dv" path="res://scripts/ui/in_game_interface.gd" id="3_hud"]
 [ext_resource type="PackedScene" uid="uid://bjenqlg6yctq3" path="res://scenes/ui/PurpleTowerPanel.tscn" id="4_purple"]
 [ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="5_0dwhk"]
-[ext_resource type="Texture2D" uid="uid://cs42nr2p32nu5" path="res://assets/pngs/settings (3).png" id="6_1n8bo"]
-[ext_resource type="PackedScene" uid="uid://cerqikuovbh7s" path="res://scenes/main_menu/Options.tscn" id="7_a32kq"]
-[ext_resource type="Script" uid="uid://dn1lm2o7i4wss" path="res://scripts/main_menu/options.gd" id="8_yfpsd"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a32kq"]
-bg_color = Color(0, 0.6896546, 0.66487616, 1)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("3_hud")
@@ -57,7 +51,7 @@ text = "Start Next Round"
 [node name="HUD" type="HBoxContainer" parent="."]
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 2873.0
+offset_right = 715.0
 offset_bottom = 229.0
 theme_override_constants/separation = 100
 
@@ -79,26 +73,15 @@ theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 100
 text = "Round: 1"
 
-[node name="OptionsButton" type="Button" parent="HUD"]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxFlat_a32kq")
-icon = ExtResource("6_1n8bo")
-
 [node name="GameOver" type="CenterContainer" parent="."]
 visible = false
 offset_right = 3584.0
 offset_bottom = 2048.0
 
-[node name="GameOverText" type="Label" parent="GameOver"]
+[node name="Label" type="Label" parent="GameOver"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 200
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Options" parent="." instance=ExtResource("7_a32kq")]
-script = ExtResource("8_yfpsd")

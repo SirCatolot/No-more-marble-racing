@@ -8,8 +8,6 @@ extends Control
 @onready var quit_button  : Button = $MenuButtons/QuitButton
 @onready var menu_music : AudioStreamPlayer = get_node("MainMenuMusic")
 @onready var options_panel: Panel = $Options
-@onready var options_title: Label = $Options/OptionsTitle
-@onready var back_button: Button = $Options/BackButton
 
 	
 
@@ -22,30 +20,18 @@ func _ready():
 		menu_music.create_tween().tween_property(menu_music, "volume_db", -12, 1.5)
 	
 	menu_buttons.visible = true
-	options_panel.visible = false 
+	options_panel.visible = false
+	options_panel.show_quit_button = false
+	options_panel._update_buttons()
+	options_panel.back_button_pressed.connect(on_options_back_from_main)
+	 
 	
 	for n in menu_buttons.get_children():
 		if n is Button:
-			n.mouse_entered.connect(on_button_hover)
-			n.mouse_exited.connect(on_button_hover_exit)
 			n.pressed.connect(on_menu_button_pressed.bind(n))
 			
-	for n in options_panel.get_children():
-		if n is Button:
-			n.mouse_entered.connect(on_button_hover.bind())
-			n.mouse_exited.connect(on_button_hover_exit)
-			n.pressed.connect(on_options_button_pressed.bind(n))
-
-func on_button_hover():
-	if not hover_sfx.playing:
-		hover_sfx.play()	
-func on_button_hover_exit():
-	if hover_sfx.playing:
-		hover_sfx.stop()
-		
+			
 func on_menu_button_pressed(btn: Button):
-	if not click_sfx.playing:
-		click_sfx.play()	
 	match btn:
 		start_button:
 			await get_tree().create_timer(0.8).timeout
@@ -59,12 +45,7 @@ func on_menu_button_pressed(btn: Button):
 			await get_tree().create_timer(0.8).timeout
 			get_tree().quit()
 			print("Quit Pressed")
-			
 
-func on_options_button_pressed(btn: Button):
-	if not click_sfx:
-		click_sfx.play()
-	match btn:
-		back_button:
-			_ready()
+func on_options_back_from_main():
+	menu_buttons.visible = true
 			
