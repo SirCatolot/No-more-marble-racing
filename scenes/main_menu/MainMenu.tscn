@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://devgswfjqsjj8"]
+[gd_scene load_steps=28 format=3 uid="uid://devgswfjqsjj8"]
 
 [ext_resource type="Script" uid="uid://b5golyma6tme3" path="res://scripts/main_menu/main_menu.gd" id="1_6k0m2"]
 [ext_resource type="Texture2D" uid="uid://wojamtytqutl" path="res://assets/pngs/TitleScreenBackground.png" id="2_qq55g"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dotmhpc5tv1qt" path="res://assets/audio/electronic-uplifting-retro-game-hidden-gem-short-version-210310.mp3" id="7_2c0k1"]
 [ext_resource type="PackedScene" uid="uid://cerqikuovbh7s" path="res://scenes/main_menu/Options.tscn" id="8_6k0m2"]
 [ext_resource type="Script" uid="uid://dn1lm2o7i4wss" path="res://scripts/main_menu/options.gd" id="9_qq55g"]
+[ext_resource type="PackedScene" uid="uid://c35q6hmifpday" path="res://scenes/main_menu/level_select.tscn" id="11_pkvjm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpiny"]
 texture = ExtResource("2_qq55g")
@@ -357,7 +358,14 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="Options" parent="." instance=ExtResource("8_6k0m2")]
+visible = false
 layout_mode = 1
 offset_top = -241.0
 offset_bottom = 525.0
 script = ExtResource("9_qq55g")
+
+[node name="LevelSelect" parent="." instance=ExtResource("11_pkvjm")]
+visible = false
+layout_mode = 1
+offset_top = -255.0
+offset_bottom = 539.0
