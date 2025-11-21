@@ -8,6 +8,7 @@ extends Control
 @onready var quit_button  : Button = $MenuButtons/QuitButton
 @onready var menu_music : AudioStreamPlayer = get_node("MainMenuMusic")
 @onready var options_panel: Panel = $Options
+@onready var level_select_panel: Panel = $LevelSelect
 
 	
 
@@ -24,6 +25,9 @@ func _ready():
 	options_panel.show_quit_button = false
 	options_panel._update_buttons()
 	options_panel.back_button_pressed.connect(on_options_back_from_main)
+	
+	level_select_panel.visible = false
+	level_select_panel.back_button_pressed.connect(on_level_select_back)
 	 
 	
 	for n in menu_buttons.get_children():
@@ -34,8 +38,9 @@ func _ready():
 func on_menu_button_pressed(btn: Button):
 	match btn:
 		start_button:
-			await get_tree().create_timer(0.8).timeout
-			get_tree().change_scene_to_file("res://scenes/levels/GreenFields.tscn")
+			level_select_panel.visible = true
+			menu_buttons.visible = false
+			#get_tree().change_scene_to_file("res://scenes/levels/GreenFields.tscn")
 			print("Play Pressed")
 		options_button:
 			menu_buttons.visible = false
@@ -47,5 +52,8 @@ func on_menu_button_pressed(btn: Button):
 			print("Quit Pressed")
 
 func on_options_back_from_main():
+	menu_buttons.visible = true
+	
+func on_level_select_back():
 	menu_buttons.visible = true
 			
