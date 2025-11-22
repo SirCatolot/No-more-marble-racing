@@ -54,6 +54,7 @@ func _on_timer_timeout():
 	if enemiesSpawned >= enemiesPerRound:
 		$Timer.stop()
 		is_round_active = false
+		GameState.add_money(100 + (currentRound * 10)) # new round bonus
 		emit_signal("round_finished", currentRound)
 	
 func start_next_round():

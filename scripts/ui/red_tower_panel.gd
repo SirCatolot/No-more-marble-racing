@@ -39,8 +39,22 @@ func _on_gui_input(event):
 		else:
 			if get_child_count() > 1:
 				get_child(1).queue_free()
-			var path = get_tree().get_root().get_node("Main/Towers")
-			if GameState.try_spend(TOWER_COST):
+			
+			var path_node = get_tree().get_root().get_node("Main/MarblePath")
+			var is_on_path = false
+			if path_node:
+				var local_pos = path_node.to_local(event.global_position)
+				var points = path_node.points
+				for i in range(points.size() - 1):
+					var p1 = points[i]
+					var p2 = points[i+1]
+					var closest_point = Geometry2D.get_closest_point_to_segment(local_pos, p1, p2)
+					if local_pos.distance_to(closest_point) < 40: # 40 is roughly half of 100 width with some margin
+						is_on_path = true
+						break
+			
+			if not is_on_path and GameState.try_spend(TOWER_COST):
+				var path = get_tree().get_root().get_node("Main/Towers")
 				path.add_child(tempTower)
 				tempTower.global_position = event.global_position
 				tempTower.get_node("Area").hide()

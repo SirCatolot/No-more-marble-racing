@@ -4,12 +4,13 @@ signal money_changed(money)
 signal lives_changed(lives)
 signal round_changed
 signal game_over
+signal tower_selected(tower)
 
 var money: int = 0
 var lives: int = 0
 var current_round: int = 1
 
-const START_MONEY := 100
+const START_MONEY := 150
 const START_LIVES := 20
 
 func _ready() -> void:

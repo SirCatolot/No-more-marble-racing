@@ -7,9 +7,35 @@ var pierceCount = 3  # How many marbles each arrow can pierce
 var fireRate = 1.0  # Shots per second
 var timeSinceLastShot = 0.0
 
+var damage_level = 1
+var fire_rate_level = 1
+var base_damage = 5
+var base_fire_rate = 1.0
+
 var pathName
 var currTargets = []
 var curr
+
+func _ready():
+	input_pickable = true
+
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		GameState.emit_signal("tower_selected", self)
+
+func upgrade_damage():
+	damage_level += 1
+	bulletDamage = base_damage + (damage_level - 1) * 2
+
+func upgrade_fire_rate():
+	fire_rate_level += 1
+	fireRate = base_fire_rate + (fire_rate_level - 1) * 0.5
+
+func get_damage_upgrade_cost():
+	return 25 + (damage_level * 25)
+
+func get_fire_rate_upgrade_cost():
+	return 25 + (fire_rate_level * 25)
 
 func _process(delta):
 	# Rotate the tower to face the current target, while it exists
@@ -21,7 +47,9 @@ func _process(delta):
 		if timeSinceLastShot >= 1.0 / fireRate:
 			_fire_arrow()
 			timeSinceLastShot = 0.0
-	# Note: Don't delete arrows when target is lost - let them continue flying
+	else:
+		for child in get_node("BulletContainer").get_children():
+			child.queue_free()
 
 func _fire_arrow():
 	# Spawn an arrow and set its properties

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo7mbqeporitg"
-path="res://.godot/imported/CarCityRug.png-5aa644d85129c1434041fc57ad87dc85.ctex"
+path="res://.godot/imported/CarCityRug.png-b17e686b6aaee5725e2c36a25ec8b5bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pngs/CarCityRug.png"
-dest_files=["res://.godot/imported/CarCityRug.png-5aa644d85129c1434041fc57ad87dc85.ctex"]
+source_file="res://Assets/pngs/CarCityRug.png"
+dest_files=["res://.godot/imported/CarCityRug.png-b17e686b6aaee5725e2c36a25ec8b5bf.ctex"]
 
 [params]
 

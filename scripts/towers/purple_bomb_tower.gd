@@ -3,24 +3,58 @@ extends StaticBody2D
 
 var Bomb = preload("res://scenes/towers/PurpleBomb.tscn")
 var bombDamage = 10  # Enough to kill a basic marble (Health = 10)
+var fireRate = 0.25
+var timeSinceLastShot = 0.0
+
+var damage_level = 1
+var fire_rate_level = 1
+var base_damage = 10
+var base_fire_rate = 0.25
+
 var pathName
 var currTargets = []
 var curr
 var can_fire = true
 
+func _ready():
+	input_pickable = true
+	if has_node("Timer"):
+		get_node("Timer").stop()
+
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		GameState.emit_signal("tower_selected", self)
+
+func upgrade_damage():
+	damage_level += 1
+	bombDamage = base_damage + (damage_level - 1) * 5
+
+func upgrade_fire_rate():
+	fire_rate_level += 1
+	fireRate = base_fire_rate + (fire_rate_level - 1) * 0.1
+
+func get_damage_upgrade_cost():
+	return 25 + (damage_level * 25)
+
+func get_fire_rate_upgrade_cost():
+	return 25 + (fire_rate_level * 25)
+
 func _process(delta):
 	# Rotate the tower to face the current target, while it exists
 	if is_instance_valid(curr):
 		self.look_at(curr.global_position)
+		
+		timeSinceLastShot += delta
+		if timeSinceLastShot >= 1.0 / fireRate and can_fire:
+			fire_bomb()
+			timeSinceLastShot = 0.0
 	else:
-		# If there's no valid target, clear all remaining projectiles
-		for i in get_node("BulletContainer").get_child_count():
-			get_node("BulletContainer").get_child(i).queue_free()
-# fdsfds
+		for child in get_node("BulletContainer").get_children():
+			child.queue_free()
+
+# Logic moved to _process
 func _on_timer_timeout():
-	# Timer fires every 4 seconds, attempt to shoot if we have a valid target
-	if is_instance_valid(curr) and can_fire:
-		fire_bomb()
+	pass
 
 func fire_bomb():
 	if curr == null:

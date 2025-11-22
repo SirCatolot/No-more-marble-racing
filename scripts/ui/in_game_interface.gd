@@ -8,6 +8,9 @@ extends CanvasLayer
 @onready var options_button: Button = $HUD/OptionsButton
 @onready var options_panel: Panel = $Options
 
+var UpgradePanelScene = preload("res://scenes/ui/UpgradePanel.tscn")
+var upgrade_panel
+
 var spawner: Node = null
 
 func _ready() -> void:
@@ -15,6 +18,10 @@ func _ready() -> void:
 	GameState.lives_changed.connect(_on_lives_changed)
 	GameState.round_changed.connect(_on_round_changed)
 	GameState.game_over.connect(_on_game_over)
+	GameState.tower_selected.connect(_on_tower_selected)
+	
+	upgrade_panel = UpgradePanelScene.instantiate()
+	add_child(upgrade_panel)
 	
 	# Hook up round signals
 	spawner = get_tree().get_first_node_in_group("path_spawner")
@@ -60,3 +67,6 @@ func _on_round_started(_r: int) -> void:
 
 func _on_round_finished(_r: int) -> void:
 	play_button.disabled = false
+
+func _on_tower_selected(tower):
+	upgrade_panel.set_tower(tower)
