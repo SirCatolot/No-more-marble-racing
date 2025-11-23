@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-@onready var money_label: Label = $HUD/MoneyPanel/MoneyContainer/MoneyLabel
-@onready var lives_label: Label = $HUD/LivesPanel/LivesContainer/LivesLabel
-@onready var round_label: Label = $HUD/RoundPanel/RoundLabel
+@onready var money_label: Label = $TopPanel/HUD/MoneyPanel/MoneyContainer/MoneyLabel
+@onready var lives_label: Label = $TopPanel/HUD/LivesPanel/LivesContainer/LivesLabel
+@onready var round_label: Label = $TopPanel/HUD/RoundPanel/RoundLabel
 @onready var game_over_layer: Control = $GameOver
-@onready var play_button: Button = $Panel/NextRoundButton
-@onready var options_button: Button = $HUD/OptionsButton
+@onready var play_button: Button = $RightPanel/NextRoundButton
+@onready var options_button: Button = $TopPanel/HUD/OptionsButton
 @onready var options_panel: Panel = $Options
 
 var spawner: Node = null
