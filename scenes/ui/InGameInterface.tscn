@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://clo7v7uqr5a11"]
+[gd_scene load_steps=16 format=3 uid="uid://clo7v7uqr5a11"]
 
 [ext_resource type="PackedScene" uid="uid://byjues027e07p" path="res://scenes/ui/RedTowerPanel.tscn" id="1_mlsdd"]
+[ext_resource type="Texture2D" uid="uid://b2ijj7xd4p30j" path="res://assets/pngs/wood_cartoon_texture.png" id="2_aaykq"]
 [ext_resource type="PackedScene" uid="uid://bp0y4sc7fmico" path="res://scenes/ui/BlueTowerPanel.tscn" id="3_1lv7e"]
 [ext_resource type="Script" uid="uid://hdim50yje8dv" path="res://scripts/ui/in_game_interface.gd" id="3_hud"]
 [ext_resource type="PackedScene" uid="uid://bjenqlg6yctq3" path="res://scenes/ui/PurpleTowerPanel.tscn" id="4_purple"]
@@ -10,6 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://cirowwml5t8ct" path="res://assets/pngs/dollar (1).png" id="6_vbmmi"]
 [ext_resource type="PackedScene" uid="uid://cerqikuovbh7s" path="res://scenes/main_menu/Options.tscn" id="7_a32kq"]
 [ext_resource type="Script" uid="uid://dn1lm2o7i4wss" path="res://scripts/main_menu/options.gd" id="8_yfpsd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaykq"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7boy"]
+corner_detail = 1
+shadow_size = 12
+shadow_offset = Vector2(-10, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfpsd"]
 bg_color = Color(0.51230276, 0.49376452, 0.56171715, 1)
@@ -29,108 +42,154 @@ bg_color = Color(0, 0.6896546, 0.66487616, 1)
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("3_hud")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 2877.0
+[node name="RightPanel" type="Panel" parent="."]
+offset_left = 2988.0
 offset_right = 3584.0
 offset_bottom = 2048.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aaykq")
 
-[node name="FlowContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 648.0
-offset_bottom = 1016.0
+[node name="WoodBackground" type="TextureRect" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_aaykq")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="FlowContainer" type="VBoxContainer" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.0
+offset_top = 28.0
+offset_right = 284.0
+offset_bottom = 967.0
+grow_horizontal = 2
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="RedTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("1_mlsdd")]
+[node name="RedTowerPanel" parent="RightPanel/FlowContainer" instance=ExtResource("1_mlsdd")]
 layout_mode = 2
 
-[node name="BlueTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("3_1lv7e")]
+[node name="BlueTowerPanel" parent="RightPanel/FlowContainer" instance=ExtResource("3_1lv7e")]
 layout_mode = 2
 
-[node name="PurpleTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("4_purple")]
+[node name="PurpleTowerPanel" parent="RightPanel/FlowContainer" instance=ExtResource("4_purple")]
 layout_mode = 2
 
-[node name="NextRoundButton" type="Button" parent="Panel"]
+[node name="NextRoundButton" type="Button" parent="RightPanel"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -353.5
-offset_top = -120.0
-offset_right = 353.5
+offset_left = -298.0
+offset_top = -128.0
+offset_right = 298.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("5_0dwhk")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 65
 text = "Start Next Round"
 
-[node name="HUD" type="HBoxContainer" parent="."]
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 2876.0
-offset_bottom = 183.0
+[node name="TopPanel" type="Panel" parent="."]
+offset_right = 2988.0
+offset_bottom = 166.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7boy")
+metadata/_edit_use_anchors_ = true
+
+[node name="WoodBackground" type="TextureRect" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_aaykq")
+expand_mode = 1
+stretch_mode = 1
+flip_h = true
+
+[node name="HUD" type="HBoxContainer" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1432.0
+offset_top = -67.0
+offset_right = 71.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 100
 
-[node name="MoneyPanel" type="PanelContainer" parent="HUD"]
+[node name="MoneyPanel" type="PanelContainer" parent="TopPanel/HUD"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
 
-[node name="MoneyContainer" type="HBoxContainer" parent="HUD/MoneyPanel"]
+[node name="MoneyContainer" type="HBoxContainer" parent="TopPanel/HUD/MoneyPanel"]
 layout_mode = 2
 theme_override_constants/separation = -10
 
-[node name="MoneyIcon" type="TextureRect" parent="HUD/MoneyPanel/MoneyContainer"]
+[node name="MoneyIcon" type="TextureRect" parent="TopPanel/HUD/MoneyPanel/MoneyContainer"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 texture = ExtResource("6_vbmmi")
 
-[node name="MoneyLabel" type="Label" parent="HUD/MoneyPanel/MoneyContainer"]
+[node name="MoneyLabel" type="Label" parent="TopPanel/HUD/MoneyPanel/MoneyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 100
 text = "100"
 
-[node name="LivesPanel" type="PanelContainer" parent="HUD"]
-custom_minimum_size = Vector2(320, 180)
+[node name="LivesPanel" type="PanelContainer" parent="TopPanel/HUD"]
+custom_minimum_size = Vector2(320, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
 
-[node name="LivesContainer" type="HBoxContainer" parent="HUD/LivesPanel"]
+[node name="LivesContainer" type="HBoxContainer" parent="TopPanel/HUD/LivesPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 19
 
-[node name="LivesIcon" type="TextureRect" parent="HUD/LivesPanel/LivesContainer"]
+[node name="LivesIcon" type="TextureRect" parent="TopPanel/HUD/LivesPanel/LivesContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 texture = ExtResource("6_ttyr8")
 
-[node name="LivesLabel" type="Label" parent="HUD/LivesPanel/LivesContainer"]
+[node name="LivesLabel" type="Label" parent="TopPanel/HUD/LivesPanel/LivesContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 100
 text = "20"
 
-[node name="RoundPanel" type="PanelContainer" parent="HUD"]
+[node name="RoundPanel" type="PanelContainer" parent="TopPanel/HUD"]
 custom_minimum_size = Vector2(440, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yfpsd")
 
-[node name="RoundLabel" type="Label" parent="HUD/RoundPanel"]
+[node name="RoundLabel" type="Label" parent="TopPanel/HUD/RoundPanel"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_0dwhk")
 theme_override_font_sizes/font_size = 100
 text = " Round: 1"
 
-[node name="OptionsButton" type="Button" parent="HUD"]
+[node name="OptionsButton" type="Button" parent="TopPanel/HUD"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -152,4 +211,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Options" parent="." instance=ExtResource("7_a32kq")]
+visible = false
 script = ExtResource("8_yfpsd")
