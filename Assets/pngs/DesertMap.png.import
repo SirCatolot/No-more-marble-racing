@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4gaob35h6nvw"
-path="res://.godot/imported/wood_texture.png-18286aa8c41c69cc0be2acd13b14b256.ctex"
+uid="uid://1a1mb55f3q8n"
+path="res://.godot/imported/DesertMap.png-973639d3d37d29669eff4e19a5206c2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pngs/wood_texture.png"
-dest_files=["res://.godot/imported/wood_texture.png-18286aa8c41c69cc0be2acd13b14b256.ctex"]
+source_file="res://Assets/pngs/DesertMap.png"
+dest_files=["res://.godot/imported/DesertMap.png-973639d3d37d29669eff4e19a5206c2d.ctex"]
 
 [params]
 

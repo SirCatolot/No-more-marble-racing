@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mp86ct128fd"]
+
+[ext_resource type="Texture2D" uid="uid://1a1mb55f3q8n" path="res://Assets/pngs/DesertMap.png" id="1_map"]
+
+[sub_resource type="Curve2D" id="Curve2D_c5dd7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -132, -277, 0, 0, 0, 0, 266, -398, 0, 0, 0, 0, 764, -372, 0, 0, 0, 0, 1201, -167, 0, 0, 0, 0, 1497, -41, 0, 0, 0, 0, 1725, -57, 0, 0, 0, 0, 1979, -125, 0, 0, 0, 0, 2131, -79, 0, 0, 0, 0, 2347, -38, 0, 0, 0, 0, 2378, 160, 0, 0, 0, 0, 2165, 411, 0, 0, 0, 0, 1915, 524, 0, 0, 0, 0, 1831, 745, 0, 0, 0, 0, 1637, 855, 0, 0, 0, 0, 1364, 840, 0, 0, 0, 0, 1185, 771, 0, 0, 0, 0, 1106, 619, 0, 0, 0, 0, 1087, 388, 0, 0, 0, 0, 1098, 259, 0, 0, 0, 0, 920, 80, 0, 0, 0, 0, 783, 122, 0, 0, 0, 0, 631, 137, 0, 0, 0, 0, 464, 152, 0, 0, 0, 0, 320, 213, 0, 0, 0, 0, 285, 335, 0, 0, 0, 0, 247, 487, 0, 0, 0, 0, 278, 673, 0, 0, 0, 0, 217, 760, 0, 0, 0, 0, 99, 711, 0, 0, 0, 0, -15, 524, 0, 0, 0, 0, -140, 502, 0, 0, 0, 0, -189, 502, 0, 0, 0, 0, -337, 471, 0, 0, 0, 0, -250, -239)
+}
+point_count = 34
+
+[node name="DesertLevel" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-162, -637)
+texture = ExtResource("1_map")
+centered = false
+
+[node name="LevelPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_c5dd7")
