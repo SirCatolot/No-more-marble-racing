@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4vdhqkrfcqav" path="res://scripts/main_menu/level_select.gd" id="1_1xmax"]
 [ext_resource type="Texture2D" uid="uid://fuxmxtsworjl" path="res://assets/pngs/GreenFields.png" id="2_bysoi"]
+[ext_resource type="Texture2D" uid="uid://1a1mb55f3q8n" path="res://Assets/pngs/DesertMap.png" id="1_map"]
 [ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="3_d1jty"]
 [ext_resource type="Texture2D" uid="uid://dpvy6a3ehmwj2" path="res://assets/pngs/Nostalgia.png" id="5_1xmax"]
 [ext_resource type="FontFile" uid="uid://b8c7y32t35w22" path="res://assets/fonts/Playfull Rocket.ttf" id="5_emqqh"]
@@ -303,6 +304,8 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
+texture = ExtResource("1_map")
+expand_mode = 1
 
 [node name="ThirdLevelStartButton" type="Button" parent="LevelsBox/ThirdLevelBox"]
 layout_mode = 2
@@ -314,8 +317,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_veneb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e311a")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nylou")
 theme_override_styles/focus = SubResource("StyleBoxFlat_esxgo")
-text = "THIrd Level
-"
+text = "Desert"
 script = ExtResource("6_ds18r")
 
 [node name="BackButton" type="Button" parent="."]

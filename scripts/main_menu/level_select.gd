@@ -31,4 +31,5 @@ func on_level_select_button_pressed(btn: Button):
 			get_tree().change_scene_to_file("res://scenes/levels/Nostalgia.tscn")
 		third_level_button:
 			await get_tree().create_timer(0.8).timeout
-			print("Third Level Selected")
+			print("Desert Selected")
+			get_tree().change_scene_to_file("res://scenes/levels/DesertLevel.tscn")
