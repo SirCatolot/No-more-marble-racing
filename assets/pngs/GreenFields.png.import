@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fuxmxtsworjl"
-path="res://.godot/imported/GreenFields.png-b9614e81102e45920399a6d010787081.ctex"
+path="res://.godot/imported/GreenFields.png-af6dd445eb14165e689b95c80db20bb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pngs/GreenFields.png"
-dest_files=["res://.godot/imported/GreenFields.png-b9614e81102e45920399a6d010787081.ctex"]
+source_file="res://assets/pngs/GreenFields.png"
+dest_files=["res://.godot/imported/GreenFields.png-af6dd445eb14165e689b95c80db20bb3.ctex"]
 
 [params]
 

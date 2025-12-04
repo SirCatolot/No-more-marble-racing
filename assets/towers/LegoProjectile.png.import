@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2uymshnim43a"
-path="res://.godot/imported/LegoProjectile.png-da71a0ae4df3b869973cec11567f81b9.ctex"
+path="res://.godot/imported/LegoProjectile.png-e60a50f3d4890e307ec0f0e1d97cb4d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Towers/LegoProjectile.png"
-dest_files=["res://.godot/imported/LegoProjectile.png-da71a0ae4df3b869973cec11567f81b9.ctex"]
+source_file="res://assets/towers/LegoProjectile.png"
+dest_files=["res://.godot/imported/LegoProjectile.png-e60a50f3d4890e307ec0f0e1d97cb4d2.ctex"]
 
 [params]
 
