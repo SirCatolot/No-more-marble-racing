@@ -8,6 +8,10 @@ extends CanvasLayer
 @onready var options_button: Button = $TopPanel/HUD/OptionsButton
 @onready var options_panel: Panel = $Options
 
+@onready var victory_panel: Panel = $VictoryPanel
+@onready var main_menu_button: Button = $VictoryPanel/VBoxContainer/HBoxContainer/MainMenuButton
+@onready var continue_button: Button = $VictoryPanel/VBoxContainer/HBoxContainer/ContinueButton
+
 var UpgradePanelScene = preload("res://scenes/ui/UpgradePanel.tscn")
 var upgrade_panel
 
@@ -40,6 +44,10 @@ func _ready() -> void:
 	options_panel.show_quit_button = true
 	options_panel._update_buttons()
 	options_button.pressed.connect(_on_options_button_pressed)
+	
+	# Wire Victory buttons
+	main_menu_button.pressed.connect(_on_main_menu_pressed)
+	continue_button.pressed.connect(_on_continue_pressed)
 
 func _on_money_changed(m: int) -> void:
 	money_label.text = "%d" % m
@@ -66,7 +74,18 @@ func _on_round_started(_r: int) -> void:
 	play_button.disabled = true
 
 func _on_round_finished(_r: int) -> void:
-	play_button.disabled = false
+	if _r == 4:
+		victory_panel.visible = true
+		# Keep play button disabled while victory screen is up
+	else:
+		play_button.disabled = false
 
 func _on_tower_selected(tower):
 	upgrade_panel.set_tower(tower)
+
+func _on_main_menu_pressed():
+	get_tree().change_scene_to_file("res://scenes/ui/MainMenu.tscn")
+
+func _on_continue_pressed():
+	victory_panel.visible = false
+	play_button.disabled = false
