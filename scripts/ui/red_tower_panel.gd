@@ -42,6 +42,8 @@ func _on_gui_input(event):
 			
 			var path_node = get_tree().get_root().get_node("Main/MarblePath")
 			var is_on_path = false
+			
+			# Check Stage 1 Path (Line2D/Segments)
 			if path_node:
 				var local_pos = path_node.to_local(event.global_position)
 				var points = path_node.points
@@ -49,9 +51,18 @@ func _on_gui_input(event):
 					var p1 = points[i]
 					var p2 = points[i+1]
 					var closest_point = Geometry2D.get_closest_point_to_segment(local_pos, p1, p2)
-					if local_pos.distance_to(closest_point) < 40: # 40 is roughly half of 100 width with some margin
+					if local_pos.distance_to(closest_point) < 40:
 						is_on_path = true
 						break
+			
+			# Check Desert Map Path (Path2D/Curve2D)
+			if not is_on_path:
+				var level_path_node = get_tree().get_root().get_node_or_null("Main/LevelPath")
+				if level_path_node:
+					var local_pos = level_path_node.to_local(event.global_position)
+					var closest_point = level_path_node.curve.get_closest_point(local_pos)
+					if local_pos.distance_to(closest_point) < 50: # Slightly larger radius for the wider desert path
+						is_on_path = true
 			
 			if not is_on_path and GameState.try_spend(TOWER_COST):
 				var path = get_tree().get_root().get_node("Main/Towers")

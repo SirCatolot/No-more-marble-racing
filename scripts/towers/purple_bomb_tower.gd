@@ -62,7 +62,7 @@ func fire_bomb():
 
 	# Spawn a bomb and set its damage and target path
 	var tempBomb = Bomb.instantiate()
-	tempBomb.pathName = pathName
+	tempBomb.target_position = curr.global_position
 	tempBomb.bombDamage = bombDamage
 
 	# Add the bomb to the BulletContainer node and position it at the tower's aim point
