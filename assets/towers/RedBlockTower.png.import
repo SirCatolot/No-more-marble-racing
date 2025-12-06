@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de6kqajmfasbj"
-path="res://.godot/imported/RedBlockTower.png-bd39d5b5466a5069387d7db0023de26a.ctex"
+path="res://.godot/imported/RedBlockTower.png-5d29322882904bdb8fe69a17e58cd59c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/towers/RedBlockTower.png"
-dest_files=["res://.godot/imported/RedBlockTower.png-bd39d5b5466a5069387d7db0023de26a.ctex"]
+source_file="res://Assets/Towers/RedBlockTower.png"
+dest_files=["res://.godot/imported/RedBlockTower.png-5d29322882904bdb8fe69a17e58cd59c.ctex"]
 
 [params]
 
