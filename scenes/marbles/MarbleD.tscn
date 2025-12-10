@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjm04rksoyiwv"]
+
+[ext_resource type="Script" uid="uid://dbfwpidpcm5gf" path="res://scripts/marbles/marble_d.gd" id="1_bqdyp"]
+[ext_resource type="Texture2D" uid="uid://bdjkbf85qayf" path="res://Assets/marbles/Marble D.png" id="2_bqdyp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeaem"]
+
+[node name="Marble D" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_mask = 4
+script = ExtResource("1_bqdyp")
+
+[node name="Marble D Sprite" type="Sprite2D" parent="."]
+position = Vector2(-3.3881318e-21, -1.5000002)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("2_bqdyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xeaem")

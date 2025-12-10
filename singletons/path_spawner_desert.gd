@@ -7,6 +7,9 @@ signal round_finished(round)
 @onready var MarbleA = preload("res://scenes/marbles/MarbleA.tscn")
 @onready var MarbleB = preload("res://scenes/marbles/MarbleB.tscn")
 @onready var MarbleC = preload("res://scenes/marbles/MarbleC.tscn")
+@onready var MarbleD = preload("res://scenes/marbles/MarbleD.tscn")
+@onready var MarbleE = preload("res://scenes/marbles/MarbleE.tscn")
+
 
 # Track current round and how many enemies have spawned
 var currentRound = 1
@@ -37,6 +40,15 @@ func _on_timer_timeout():
 		marble_instance = MarbleB.instantiate()
 	elif currentRound == 3:
 		marble_instance = MarbleC.instantiate()
+	elif currentRound == 4:
+		marble_instance = MarbleD.instantiate()
+	elif currentRound == 5:
+		var r = randf()
+		if r < 0.7:
+			marble_instance = MarbleA.instantiate()
+		else:
+			marble_instance = MarbleE.instantiate()
+
 	else:
 		# After round 3, mix them randomly with higher chance for harder marbles
 		var r = randf()
@@ -44,8 +56,13 @@ func _on_timer_timeout():
 			marble_instance = MarbleA.instantiate()
 		elif r < 0.6:
 			marble_instance = MarbleB.instantiate()
-		else:
+		elif r < 0.8:
 			marble_instance = MarbleC.instantiate()
+		elif r < 0.9:
+			marble_instance = MarbleD.instantiate()
+		else:
+			marble_instance = MarbleE.instantiate()
+
 
 	path_follow.add_child(marble_instance)
 	level_path.add_child(path_follow)

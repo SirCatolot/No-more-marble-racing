@@ -7,6 +7,8 @@ signal round_finished(round)
 @onready var MarbleA = preload("res://scenes/marbles/Stage3MarbleA.tscn")
 @onready var MarbleB = preload("res://scenes/marbles/Stage3MarbleB.tscn")
 @onready var MarbleC = preload("res://scenes/marbles/Stage3MarbleC.tscn")
+@onready var MarbleD = preload("res://scenes/marbles/Stage3MarbleD.tscn")
+@onready var MarbleE = preload("res://scenes/marbles/Stage3MarbleE.tscn")
 
 # Track current round and how many enemies have spawned
 var currentRound = 1
@@ -32,15 +34,28 @@ func _on_timer_timeout():
 		tempPath = MarbleB.instantiate()
 	elif currentRound == 3:
 		tempPath = MarbleC.instantiate()
+	elif currentRound == 4:
+		tempPath = MarbleD.instantiate()
+	elif currentRound == 5:
+		var r = randf()
+		if r < 0.7:
+			tempPath = MarbleA.instantiate()
+		else:
+			tempPath = MarbleE.instantiate()
+		
 	else:
 		# After round 3, mix them randomly
 		var r = randf()
 		if r < 0.5:
 			tempPath = MarbleA.instantiate()
-		elif r < 0.8:
+		elif r < 0.6:
 			tempPath = MarbleB.instantiate()
-		else:
+		elif r < 0.8:
 			tempPath = MarbleC.instantiate()
+		elif r < 0.9:
+			tempPath = MarbleD.instantiate()
+		else:
+			tempPath = MarbleE.instantiate()
 
 	add_child(tempPath)
 	enemiesSpawned += 1
@@ -48,12 +63,13 @@ func _on_timer_timeout():
 	# Round 1: After first 5 marbles, slow down spawn rate
 	if currentRound == 1 and enemiesSpawned == 5:
 		$Timer.stop()
-		$Timer.start(1.5)  # Slower spawn rate for remaining marbles
+		$Timer.start(.5)  # Slower spawn rate for remaining marbles
 
 	# When enough enemies have spawned allow starting next round
 	if enemiesSpawned >= enemiesPerRound:
 		$Timer.stop()
 		is_round_active = false
+		GameState.add_money(100 + (currentRound * 10)) # new round bonus
 		emit_signal("round_finished", currentRound)
 	
 func start_next_round():

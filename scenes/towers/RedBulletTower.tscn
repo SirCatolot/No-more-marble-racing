@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj0pv0roaae40"]
 
 [ext_resource type="Script" uid="uid://f8ic8itlyb30" path="res://scripts/towers/red_bullet_tower.gd" id="1_nst41"]
-[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://assets/towers/RedBlockTower.png" id="2_3majq"]
+[ext_resource type="Texture2D" uid="uid://de6kqajmfasbj" path="res://Assets/Towers/RedBlockTower.png" id="2_3majq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rlos"]
 size = Vector2(128, 128)
@@ -17,6 +17,8 @@ corner_radius_bottom_right = 450
 corner_radius_bottom_left = 450
 
 [node name="RedBulletTower" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_nst41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

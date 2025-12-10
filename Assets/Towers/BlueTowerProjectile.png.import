@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4gaob35h6nvw"
-path="res://.godot/imported/wood_texture.png-bc9b3a89586624c0b4648350efb22918.ctex"
+uid="uid://ba1i6y154ah07"
+path="res://.godot/imported/BlueTowerProjectile.png-fa75eafb34b81025481bacc2ccb9e22f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PNGs/wood_texture.png"
-dest_files=["res://.godot/imported/wood_texture.png-bc9b3a89586624c0b4648350efb22918.ctex"]
+source_file="res://Assets/Towers/BlueTowerProjectile.png"
+dest_files=["res://.godot/imported/BlueTowerProjectile.png-fa75eafb34b81025481bacc2ccb9e22f.ctex"]
 
 [params]
 

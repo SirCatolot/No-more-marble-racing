@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cavuirb7wsnkk"]
 
 [ext_resource type="Script" uid="uid://vclrnouq5uea" path="res://scripts/towers/blue_arrow.gd" id="1_qskru"]
-[ext_resource type="Texture2D" uid="uid://ba5pvgvh1eyph" path="res://assets/towers/BlueArrow.png" id="2_hq5ts"]
+[ext_resource type="Texture2D" uid="uid://ba1i6y154ah07" path="res://Assets/Towers/BlueTowerProjectile.png" id="2_qskru"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avvd0"]
 radius = 8.0
@@ -17,7 +17,7 @@ script = ExtResource("1_qskru")
 
 [node name="TowerDefenseTile251" type="Sprite2D" parent="."]
 scale = Vector2(0.045, 0.045)
-texture = ExtResource("2_hq5ts")
+texture = ExtResource("2_qskru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964

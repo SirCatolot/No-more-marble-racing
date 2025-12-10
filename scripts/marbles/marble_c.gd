@@ -2,12 +2,20 @@ extends CharacterBody2D
 
 
 @export var speed = 350
+var baseSpeed = speed
+var speedMultiplier := 1.0
 var Health = 10
+
+func set_speed_multiplier(mult: float) -> void:
+	speedMultiplier = max(speedMultiplier, mult)
 
 ## Move the enemy forward along its PathFollow2D path each frame,
 ## increasing its progress based on movement speed and frame time.
 func _process(delta):
-	get_parent().set_progress(get_parent().get_progress() + speed*delta)
+	get_parent().set_progress(get_parent().get_progress() + baseSpeed * speedMultiplier * delta)
+	
+	# Reset after movement so boosters must reapply each frame
+	speedMultiplier = 1.0
 	
 	# Despawns the enemy and removes a life from player if they reach the end of the path
 	if get_parent().get_progress_ratio() >= 1:

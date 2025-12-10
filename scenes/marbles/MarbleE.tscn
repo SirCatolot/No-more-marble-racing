@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnlpg83fwxdug"]
+
+[ext_resource type="Script" uid="uid://t6q0pta45h7" path="res://scripts/marbles/marble_e.gd" id="1_y5g50"]
+[ext_resource type="Texture2D" uid="uid://cbli4adb4lvvt" path="res://Assets/marbles/Marble E.png" id="2_y5g50"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeaem"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tf3ib"]
+radius = 141.00798
+
+[node name="Marble E" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_mask = 4
+script = ExtResource("1_y5g50")
+
+[node name="Marble E Sprite" type="Sprite2D" parent="."]
+position = Vector2(0.9999999, -5.684342e-14)
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("2_y5g50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xeaem")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Boost Range" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_tf3ib")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba5pvgvh1eyph"
-path="res://.godot/imported/BlueArrow.png-cbb20dd624b300941439ce7c38cd50a1.ctex"
+uid="uid://cbli4adb4lvvt"
+path="res://.godot/imported/Marble E.png-faa078b38780e3bb03b8f0f8e0df52c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Towers/BlueArrow.png"
-dest_files=["res://.godot/imported/BlueArrow.png-cbb20dd624b300941439ce7c38cd50a1.ctex"]
+source_file="res://Assets/marbles/Marble E.png"
+dest_files=["res://.godot/imported/Marble E.png-faa078b38780e3bb03b8f0f8e0df52c7.ctex"]
 
 [params]
 
