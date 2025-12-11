@@ -7,37 +7,38 @@ var pathName = ""
 var bulletDamage
 var last_known_target_pos = null
 
+var target_node: Node2D = null
+
 func _physics_process(delta):
-	var pathSpawnerNode = get_tree().get_first_node_in_group("path_spawner")
-	if pathSpawnerNode == null:
-		# No spawner in the scene, bullet has nothing to track
-		queue_free()
-		return
-	
-	var target_found := false
-	
-	# Go through all child paths under the PathSpawner
-	for child in pathSpawnerNode.get_children():
-		if child.name == pathName:
-			if child.get_child_count() == 0:
-				continue
-				
-			var path_follow := child.get_child(0)
-			if path_follow.get_child_count() > 0:
-				var enemy = path_follow.get_child(0)
-				target = enemy.global_position
-				last_known_target_pos = target
-				target_found = true
-				break
-				
-	if not target_found:
-		if last_known_target_pos != null:
-			# No current enemy found, but we have a previous position, keep flying there
-			target = last_known_target_pos
-		else:
-			# Never had a target, destroy bullet
+	if is_instance_valid(target_node):
+		target = target_node.global_position
+	else:
+		var pathSpawnerNode = get_tree().get_first_node_in_group("path_spawner")
+		if pathSpawnerNode == null:
 			queue_free()
 			return
+		
+		var target_found := false
+		
+		for child in pathSpawnerNode.get_children():
+			if child.name == pathName:
+				if child.get_child_count() == 0:
+					continue
+					
+				var path_follow := child.get_child(0)
+				if path_follow.get_child_count() > 0:
+					var enemy = path_follow.get_child(0)
+					target = enemy.global_position
+					last_known_target_pos = target
+					target_found = true
+					break
+					
+		if not target_found:
+			if last_known_target_pos != null:
+				target = last_known_target_pos
+			else:
+				queue_free()
+				return
 
 	# Point the bullet's velocity vector toward the target, scaled by its speed
 	if target:

@@ -14,6 +14,12 @@ var target_marble = null  # Reference to the marble we're tracking
 var processing_collision = false  # Prevent multiple hits in same frame
 
 func _ready():
+	if target_marble != null:
+		var target_pos = target_marble.global_position
+		direction = global_position.direction_to(target_pos)
+		look_at(target_pos)
+		return
+
 	# Find the first marble to track
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
 

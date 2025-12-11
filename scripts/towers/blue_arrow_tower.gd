@@ -63,6 +63,12 @@ func _fire_arrow():
 
 	# Add the bullet to the BulletContainer node
 	get_node("BulletContainer").add_child(tempBullet)
+	
+	if is_instance_valid(curr):
+		if curr.has_method("get_child_count") and curr.get_child_count() > 0:
+			tempBullet.target_marble = curr.get_child(0)
+		else:
+			tempBullet.target_marble = curr
 
 func _on_tower_body_entered(body):
 	if "Marble" in body.name:
