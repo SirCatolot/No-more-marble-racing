@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1mp86ct128fd"]
+[gd_scene load_steps=5 format=3 uid="uid://c1mp86ct128fd"]
 
-[ext_resource type="Texture2D" uid="uid://1a1mb55f3q8n" path="res://assets/pngs/DesertMap.png" id="1_map"]
+[ext_resource type="Texture2D" uid="uid://1a1mb55f3q8n" path="res://Assets/PNGs/DesertMap.png" id="1_map"]
 [ext_resource type="PackedScene" uid="uid://clo7v7uqr5a11" path="res://scenes/ui/InGameInterface.tscn" id="2_7fvc0"]
-[ext_resource type="Script" path="res://singletons/path_spawner_desert.gd" id="3_spawner"]
+[ext_resource type="Script" uid="uid://dbaisowthcasw" path="res://singletons/path_spawner_desert.gd" id="3_spawner"]
 
 [sub_resource type="Curve2D" id="Curve2D_c5dd7"]
 _data = {

@@ -8,7 +8,7 @@ var speedMultiplier := 1.0
 @export var spawnScene:= preload("res://scenes/marbles/MarbleA.tscn")
 var Health = 10
 
-func set_speed_multiplier(mult: float) -> void:
+func set_speed_multiplier(mult):
 	speedMultiplier = max(speedMultiplier, mult)
 
 ## Move the enemy forward along its PathFollow2D path each frame,

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dp4iedlbieor3"]
 
 [ext_resource type="Script" uid="uid://jcf1ucvg5fvs" path="res://scripts/towers/blue_arrow_tower.gd" id="1_s3pbt"]
-[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://assets/towers/BlueTower.png" id="2_awfte"]
+[ext_resource type="Texture2D" uid="uid://dorgkxh7beqww" path="res://Assets/Towers/BlueTower.png" id="2_awfte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3xm7"]
 size = Vector2(128, 128)
@@ -17,6 +17,8 @@ corner_radius_bottom_right = 450
 corner_radius_bottom_left = 450
 
 [node name="BlueArrowTower" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_s3pbt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

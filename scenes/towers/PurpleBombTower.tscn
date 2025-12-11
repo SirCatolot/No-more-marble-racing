@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://2hxr483ifg0d"]
 
 [ext_resource type="Script" uid="uid://csyev1mhm88ia" path="res://scripts/towers/purple_bomb_tower.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://c3i6jd7u007pi" path="res://assets/towers/PurpleTower.png" id="2_1e5bx"]
+[ext_resource type="Texture2D" uid="uid://c3i6jd7u007pi" path="res://Assets/Towers/PurpleTower.png" id="2_1e5bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bomb"]
 size = Vector2(128, 128)
@@ -17,6 +17,8 @@ corner_radius_bottom_right = 450
 corner_radius_bottom_left = 450
 
 [node name="PurpleBombTower" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_script")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

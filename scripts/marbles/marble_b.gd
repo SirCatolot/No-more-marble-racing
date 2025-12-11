@@ -6,7 +6,7 @@ var baseSpeed = speed
 var speedMultiplier := 1.0
 var Health = 15
 
-func set_speed_multiplier(mult: float) -> void:
+func set_speed_multiplier(mult):
 	speedMultiplier = max(speedMultiplier, mult)
 
 ## Move the enemy forward along its PathFollow2D path each frame,
