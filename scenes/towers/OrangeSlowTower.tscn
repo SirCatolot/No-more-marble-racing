@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://orange_slow_tower_scene"]
+[gd_scene load_steps=6 format=3 uid="uid://d23j5qpjpteso"]
 
-[ext_resource type="Script" path="res://scripts/towers/orange_slow_tower.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://assets/towers/orange_tower.png" id="2_texture"]
+[ext_resource type="Script" uid="uid://dndymduxr5by2" path="res://scripts/towers/orange_slow_tower.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://djtd0an5yndyx" path="res://Assets/Towers/OrangeTower.png" id="2_3iwli"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rlos"]
 size = Vector2(128, 128)
@@ -28,8 +28,9 @@ shape = SubResource("RectangleShape2D_8rlos")
 position = Vector2(64, 0)
 
 [node name="TowerSprite" type="Sprite2D" parent="."]
+rotation = 1.5707964
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("2_texture")
+texture = ExtResource("2_3iwli")
 
 [node name="Tower" type="Area2D" parent="."]
 

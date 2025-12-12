@@ -25,9 +25,9 @@ script = ExtResource("1_s3pbt")
 shape = SubResource("RectangleShape2D_j3xm7")
 
 [node name="Aim" type="Marker2D" parent="."]
-position = Vector2(-2, -44)
+position = Vector2(64, 0)
 
-[node name="TowerDefenseTile250" type="Sprite2D" parent="."]
+[node name="TowerSprite" type="Sprite2D" parent="."]
 rotation = 1.5707964
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("2_awfte")

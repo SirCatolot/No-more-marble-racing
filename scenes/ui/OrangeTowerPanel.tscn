@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://orange_tower_panel_scene"]
+[gd_scene load_steps=4 format=3 uid="uid://bwc5l8ctwm18j"]
 
-[ext_resource type="Script" path="res://scripts/ui/orange_tower_panel.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://assets/towers/orange_tower.png" id="2_texture"]
-[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="3_font"]
+[ext_resource type="Script" uid="uid://b3j7jolbmyxc8" path="res://scripts/ui/orange_tower_panel.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://djtd0an5yndyx" path="res://Assets/Towers/OrangeTower.png" id="2_24rrl"]
+[ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://Assets/Fonts/Super Trend.ttf" id="3_font"]
 
 [node name="OrangeTowerPanel" type="Panel"]
 custom_minimum_size = Vector2(480, 200)
@@ -37,7 +37,7 @@ custom_minimum_size = Vector2(200, 176)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-texture = ExtResource("2_texture")
+texture = ExtResource("2_24rrl")
 expand_mode = 2
 stretch_mode = 5
 

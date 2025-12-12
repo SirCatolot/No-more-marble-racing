@@ -25,7 +25,7 @@ script = ExtResource("1_script")
 shape = SubResource("RectangleShape2D_bomb")
 
 [node name="Aim" type="Marker2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(64, 0)
 
 [node name="TowerSprite" type="Sprite2D" parent="."]
 rotation = 1.5707964
