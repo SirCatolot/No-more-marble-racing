@@ -10,7 +10,7 @@ func take_damage(amount):
 	Health -= amount
 
 func set_speed_multiplier(mult):
-	speedMultiplier = max(speedMultiplier, mult)
+	speedMultiplier = mult
 
 ## Move the enemy forward along its PathFollow2D path each frame,
 ## increasing its progress based on movement speed and frame time.

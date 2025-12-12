@@ -40,24 +40,38 @@ func update_ui():
 	elif "PurpleBomb" in current_tower.name or "Purple" in current_tower.name:
 		tower_name_label.text = "PURPLE TOWER"
 		tower_name_label.add_theme_color_override("font_color", Color(0.8, 0.4, 1))
+	elif "OrangeSlow" in current_tower.name or "Orange" in current_tower.name:
+		tower_name_label.text = "ORANGE TOWER"
+		tower_name_label.add_theme_color_override("font_color", Color(1, 0.65, 0))
 	else:
 		tower_name_label.text = "UPGRADES"
 		tower_name_label.remove_theme_color_override("font_color")
 
 	var dmg = 0
+	var is_duration = false
 	if "bulletDamage" in current_tower:
 		dmg = current_tower.bulletDamage
 	elif "bombDamage" in current_tower:
 		dmg = current_tower.bombDamage
+	elif "duration_level" in current_tower: # Orange tower uses duration
+		dmg = current_tower.base_duration + (current_tower.duration_level - 1)
+		is_duration = true
 		
 	var fr = 0
 	if "fireRate" in current_tower:
 		fr = current_tower.fireRate
 		
+	if is_duration:
+		$VBoxContainer/DamageContainer/Label.text = "Dur:"
+	else:
+		$VBoxContainer/DamageContainer/Label.text = "Dmg:"
+		
 	damage_label.text = str(dmg)
 	# Show level next to value
 	if "damage_level" in current_tower:
 		damage_label.text += " (Lvl " + str(current_tower.damage_level) + ")"
+	elif "duration_level" in current_tower:
+		damage_label.text += " (Lvl " + str(current_tower.duration_level) + ")"
 		
 	fire_rate_label.text = str(snapped(fr, 0.01))
 	if "fire_rate_level" in current_tower:

@@ -7,7 +7,7 @@ var speedMultiplier := 1.0
 var Health = 10
 
 func set_speed_multiplier(mult):
-	speedMultiplier = max(speedMultiplier, mult)
+	speedMultiplier = mult
 
 ## Move the enemy forward along its PathFollow2D path each frame,
 ## increasing its progress based on movement speed and frame time.

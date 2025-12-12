@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://orange_slow_projectile_scene"]
+
+[ext_resource type="Script" path="res://scripts/towers/orange_slow_projectile.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/towers/LegoProjectile.png" id="2_texture"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5hhi"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3aot2"]
+height = 38.0
+
+[node name="OrangeSlowProjectile" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_o5hhi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3aot2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

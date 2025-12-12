@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bp0y4sc7fmico" path="res://scenes/ui/BlueTowerPanel.tscn" id="3_1lv7e"]
 [ext_resource type="Script" uid="uid://hdim50yje8dv" path="res://scripts/ui/in_game_interface.gd" id="3_hud"]
 [ext_resource type="PackedScene" uid="uid://bjenqlg6yctq3" path="res://scenes/ui/PurpleTowerPanel.tscn" id="4_purple"]
+[ext_resource type="PackedScene" uid="uid://orange_tower_panel_scene" path="res://scenes/ui/OrangeTowerPanel.tscn" id="5_orange"]
 [ext_resource type="FontFile" uid="uid://c5pkacfkaa7dn" path="res://assets/fonts/Super Trend.ttf" id="5_0dwhk"]
 [ext_resource type="Texture2D" uid="uid://cs42nr2p32nu5" path="res://assets/pngs/settings (3).png" id="6_1n8bo"]
 [ext_resource type="Texture2D" uid="uid://eqkcavfcfthm" path="res://assets/pngs/heart.png" id="6_ttyr8"]
@@ -79,6 +80,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="PurpleTowerPanel" parent="RightPanel/FlowContainer" instance=ExtResource("4_purple")]
+layout_mode = 2
+
+[node name="OrangeTowerPanel" parent="RightPanel/FlowContainer" instance=ExtResource("5_orange")]
 layout_mode = 2
 
 [node name="NextRoundButton" type="Button" parent="RightPanel"]

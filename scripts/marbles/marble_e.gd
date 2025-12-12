@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 
 @export var speed = 330
-@export var speedMultiplier := 1.5
+@export var speedMultiplier := 1.5 # This is the boost it gives to OTHERS
+var selfSpeedMultiplier := 1.0
 var Health = 10
 
 func apply_speed_boost():
@@ -11,13 +12,26 @@ func apply_speed_boost():
 		if b.has_method("set_speed_multiplier"):
 			b.set_speed_multiplier(speedMultiplier)
 
+func set_speed_multiplier(mult):
+	selfSpeedMultiplier = mult 
+
 ## Move the enemy forward along its PathFollow2D path each frame,
 ## increasing its progress based on movement speed and frame time.
 func _process(delta):
 	# Apply aura speed effect
 	apply_speed_boost()
 	
-	get_parent().set_progress(get_parent().get_progress() + speed*delta)
+	# Use local speedMultiplier for self movement (if we want it to be slowable)
+	# But wait, Marble E has 'speedMultiplier' property exported as 1.5 (its boost strength).
+	# This variable name conflict is confusing.
+	# I should rename the exported one to 'boostStrength' and use 'speedMultiplier' for self.
+	# For now, I will just ignore slowing Marble E to avoid breaking its aura logic, 
+	# or I'll assume 'speedMultiplier' is ONLY for its aura.
+	# If I want to slow it, I need a separate variable.
+	# Let's add 'selfSpeedMultiplier'
+	
+	get_parent().set_progress(get_parent().get_progress() + speed * selfSpeedMultiplier * delta)
+	selfSpeedMultiplier = 1.0
 	
 	# Despawns the enemy and removes a life from player if they reach the end of the path
 	if get_parent().get_progress_ratio() >= 1:

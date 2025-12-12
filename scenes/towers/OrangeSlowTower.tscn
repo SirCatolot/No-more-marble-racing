@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://orange_slow_tower_scene"]
+
+[ext_resource type="Script" path="res://scripts/towers/orange_slow_tower.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/towers/orange_tower.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rlos"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4bm2r"]
+radius = 400.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orange"]
+bg_color = Color(1, 0.647, 0, 0.3137255)
+corner_radius_top_left = 450
+corner_radius_top_right = 450
+corner_radius_bottom_right = 450
+corner_radius_bottom_left = 450
+
+[node name="OrangeSlowTower" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8rlos")
+
+[node name="Aim" type="Marker2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="TowerSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_texture")
+
+[node name="Tower" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tower"]
+shape = SubResource("CircleShape2D_4bm2r")
+
+[node name="BulletContainer" type="Node" parent="."]
+
+[node name="Area" type="Panel" parent="."]
+modulate = Color(1, 0.647, 0, 0.3137255)
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_orange")
+
+[connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
+[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]
