@@ -73,9 +73,15 @@ func _on_timer_timeout():
 	# When enough enemies have spawned allow starting next round
 	if enemiesSpawned >= enemiesPerRound:
 		$Timer.stop()
-		is_round_active = false
-		GameState.add_money(150 + (currentRound * 15)) # Higher bonus for harder map
-		emit_signal("round_finished", currentRound)
+		# Do not emit round_finished yet. Wait for all enemies to be cleared.
+
+func _process(_delta):
+	if is_round_active and $Timer.is_stopped():
+		# Spawning is done, check if all enemies are dead
+		if level_path.get_child_count() == 0:
+			is_round_active = false
+			GameState.add_money(150 + (currentRound * 15))
+			emit_signal("round_finished", currentRound)
 	
 func start_next_round():
 	# Guard against double start

@@ -84,7 +84,7 @@ func _on_tower_selected(tower):
 	upgrade_panel.set_tower(tower)
 
 func _on_main_menu_pressed():
-	get_tree().change_scene_to_file("res://scenes/ui/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu/MainMenu.tscn")
 
 func _on_continue_pressed():
 	victory_panel.visible = false

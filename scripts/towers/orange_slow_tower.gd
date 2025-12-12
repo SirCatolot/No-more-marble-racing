@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var Bullet = preload("res://scenes/towers/OrangeSlowProjectile.tscn")
-var bulletDamage = 0 # Slow tower doesn't deal damage by default, or maybe it does? Prompt says "slows... by half". Usually slow towers do low/no damage. I'll set it to 0 for now.
+# var bulletDamage = 0 # Removed as this tower does not deal damage
 var fireRate = 0.33 # Shoots every 3 seconds = 1/3 = 0.33 shots per second.
 var timeSinceLastShot = 0.0
 

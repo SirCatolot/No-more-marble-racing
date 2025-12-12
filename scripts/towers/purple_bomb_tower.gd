@@ -49,6 +49,10 @@ func _process(delta):
 			fire_bomb()
 			timeSinceLastShot = 0.0
 	else:
+		# If current target is invalid (e.g. died), try to find a new one immediately
+		if get_node("Tower").get_overlapping_bodies().size() > 0:
+			_update_target()
+			
 		for child in get_node("BulletContainer").get_children():
 			child.queue_free()
 
@@ -71,28 +75,29 @@ func fire_bomb():
 
 func _on_tower_body_entered(body):
 	if "Marble" in body.name:
-		var tempArray = []
-		currTargets = get_node("Tower").get_overlapping_bodies()
-
-		# Filter out only the objects with "Marble" in the name (enemies)
-		for i in currTargets:
-			if "Marble" in i.name:
-				tempArray.append(i)
-
-		var currTarget = null
-
-		# Find the enemy furthest along the path (closest to exit)
-		for i in tempArray:
-			if currTarget == null:
-				currTarget = i.get_node("../")
-			else:
-				if i.get_parent().get_progress() > currTarget.get_progress():
-					currTarget = i.get_node("../")
-
-		# Set the chosen target as the current enemy
-		curr = currTarget
-		pathName = currTarget.get_parent().name
+		_update_target()
 
 func _on_tower_body_exited(body):
-	# Update the list of overlapping enemies when one leaves the detection zone
 	currTargets = get_node("Tower").get_overlapping_bodies()
+	_update_target()
+
+func _update_target():
+	var tempArray = []
+	currTargets = get_node("Tower").get_overlapping_bodies()
+	
+	for i in currTargets:
+		if "Marble" in i.name:
+			tempArray.append(i)
+			
+	var currTarget = null
+	
+	for i in tempArray:
+		if currTarget == null:
+			currTarget = i.get_node("../")
+		else:
+			if i.get_parent().get_progress() > currTarget.get_progress():
+				currTarget = i.get_node("../")
+	
+	if currTarget != null:
+		curr = currTarget
+		pathName = currTarget.get_parent().name

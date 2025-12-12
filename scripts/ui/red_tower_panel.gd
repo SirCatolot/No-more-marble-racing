@@ -66,9 +66,20 @@ func _on_gui_input(event):
 			
 			if not is_on_path and GameState.try_spend(TOWER_COST):
 				var path = get_tree().get_root().get_node("Main/Towers")
-				path.add_child(tempTower)
-				tempTower.global_position = event.global_position
-				tempTower.get_node("Area").hide()
+				
+				# Check for overlap with existing towers
+				var can_place = true
+				for child in path.get_children():
+					if child.global_position.distance_to(event.global_position) < 80:
+						can_place = false
+						break
+				
+				if can_place:
+					path.add_child(tempTower)
+					tempTower.global_position = event.global_position
+					tempTower.get_node("Area").hide()
+				else:
+					tempTower.queue_free()
 		
 	else:
 		if get_child_count() > 1:
