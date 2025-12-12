@@ -14,6 +14,7 @@ signal round_finished(round)
 var currentRound = 1
 var enemiesSpawned = 0
 var enemiesPerRound = 10  # Round 1 now spawns 10 marbles total
+var total_rounds = 4
 var is_round_active = false
 var has_started = false
 
@@ -68,9 +69,15 @@ func _on_timer_timeout():
 	# When enough enemies have spawned allow starting next round
 	if enemiesSpawned >= enemiesPerRound:
 		$Timer.stop()
-		is_round_active = false
-		GameState.add_money(100 + (currentRound * 10)) # new round bonus
-		emit_signal("round_finished", currentRound)
+		# Wait for clear
+
+func _process(_delta):
+	if is_round_active and $Timer.is_stopped():
+		if get_child_count() <= 1: # Only Timer left
+			# Wait a tiny bit effectively or just trigger? Just trigger.
+			is_round_active = false
+			GameState.add_money(100 + (currentRound * 10)) # new round bonus
+			emit_signal("round_finished", currentRound)
 	
 func start_next_round():
 	# Guard against double start

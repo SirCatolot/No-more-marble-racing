@@ -74,7 +74,11 @@ func _on_round_started(_r: int) -> void:
 	play_button.disabled = true
 
 func _on_round_finished(_r: int) -> void:
-	if _r == 4:
+	var target_round = 4
+	if spawner != null and "total_rounds" in spawner:
+		target_round = spawner.total_rounds
+
+	if _r == target_round:
 		victory_panel.visible = true
 		# Keep play button disabled while victory screen is up
 	else:

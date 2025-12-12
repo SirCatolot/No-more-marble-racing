@@ -106,13 +106,11 @@ func _process(delta):
 		_cleanup()
 
 func _cleanup():
-	var path_follow:= get_parent()
-	path_follow.queue_free()
-	#var parent = get_parent()
-	#var grandparent = parent.get_parent()
-	## In Desert Level, we only want to delete the PathFollow2D (parent)
-	## In Stage 1, we want to delete the whole Path2D container (grandparent)
-	#if grandparent.name == "LevelPath":
-		#parent.queue_free()
-	#else:
-		#grandparent.queue_free()
+	var parent = get_parent()
+	var grandparent = parent.get_parent()
+	# In Desert Level, we only want to delete the PathFollow2D (parent)
+	# In Stage 1, we want to delete the whole Path2D container (grandparent)
+	if grandparent.name == "LevelPath":
+		parent.queue_free()
+	else:
+		grandparent.queue_free()

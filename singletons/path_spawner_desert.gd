@@ -15,6 +15,7 @@ signal round_finished(round)
 var currentRound = 1
 var enemiesSpawned = 0
 var enemiesPerRound = 15  # Starts harder than Stage 1 (was 10)
+var total_rounds = 4
 var is_round_active = false
 var has_started = false
 
