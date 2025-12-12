@@ -4,7 +4,7 @@ extends Panel
 @onready var name_label: Label = %NameLabel
 @onready var cost_label: Label = %CostLabel
 
-@export var tower_display_name := "Orange Tower"
+@export var tower_display_name := "Glue Tower"
 
 var currTile
 const TOWER_COST := 75
